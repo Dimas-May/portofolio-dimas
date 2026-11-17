@@ -1,0 +1,3226 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dimas Maycardo Sihotang | Portofolio</title>
+    <meta
+      name="description"
+      content="Portofolio Resmi Dimas Maycardo Sihotang — Mahasiswa Sistem Informasi Universitas Indraprasta PGRI, CRM & Customer Support, Front-End Web Developer, dan Public Speaker (MC)."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+              display: ["Inter", "Plus Jakarta Sans", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            colors: {
+              navyDark: "#050a18",
+              navyCard: "#0c1326",
+              royalBlue: "#2563eb",
+              royalBlueHover: "#1d4ed8",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #050a18;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+
+      /* ==================== TOPOGRAPHIC CONTOUR PATTERNS ==================== */
+      .bg-topo-dark {
+        background-color: #050a18;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke='%231e293b' stroke-width='1.2' stroke-opacity='0.55'%3E%3Cpath d='M-50 120 C 120 40, 260 220, 420 100 C 520 20, 580 160, 650 110'/%3E%3Cpath d='M-50 160 C 140 70, 250 260, 430 140 C 530 60, 570 200, 650 150'/%3E%3Cpath d='M-50 200 C 160 100, 240 300, 440 180 C 540 100, 560 240, 650 190'/%3E%3Cpath d='M-60 360 C 90 280, 220 460, 390 340 C 510 250, 550 420, 660 360'/%3E%3Cpath d='M-60 400 C 110 320, 230 500, 400 380 C 520 290, 540 460, 660 400'/%3E%3Cpath d='M-60 440 C 130 360, 240 540, 410 420 C 530 330, 530 500, 660 440'/%3E%3Ccircle cx='180' cy='150' r='55'/%3E%3Ccircle cx='180' cy='150' r='32'/%3E%3Ccircle cx='460' cy='420' r='75'/%3E%3Ccircle cx='460' cy='420' r='45'/%3E%3Ccircle cx='460' cy='420' r='20'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 560px 560px;
+      }
+
+      .bg-topo-light {
+        background-color: #f8fafc;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke='%23cbd5e1' stroke-width='1.25' stroke-opacity='0.65'%3E%3Cpath d='M-50 120 C 120 40, 260 220, 420 100 C 520 20, 580 160, 650 110'/%3E%3Cpath d='M-50 160 C 140 70, 250 260, 430 140 C 530 60, 570 200, 650 150'/%3E%3Cpath d='M-50 200 C 160 100, 240 300, 440 180 C 540 100, 560 240, 650 190'/%3E%3Cpath d='M-60 360 C 90 280, 220 460, 390 340 C 510 250, 550 420, 660 360'/%3E%3Cpath d='M-60 400 C 110 320, 230 500, 400 380 C 520 290, 540 460, 660 400'/%3E%3Cpath d='M-60 440 C 130 360, 240 540, 410 420 C 530 330, 530 500, 660 440'/%3E%3Ccircle cx='180' cy='150' r='55'/%3E%3Ccircle cx='180' cy='150' r='32'/%3E%3Ccircle cx='460' cy='420' r='75'/%3E%3Ccircle cx='460' cy='420' r='45'/%3E%3Ccircle cx='460' cy='420' r='20'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 560px 560px;
+      }
+
+      /* ==================== FLOATING PILL NAVBAR & GHOST MASCOT ==================== */
+      #ghost-mascot {
+        transition:
+          transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+          top 0.35s ease;
+        filter: drop-shadow(0 6px 12px rgba(37, 99, 235, 0.35));
+      }
+
+      @keyframes ghostBob {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(-2deg);
+        }
+        50% {
+          transform: translateY(-5px) rotate(3deg);
+        }
+      }
+      .ghost-inner-bob {
+        animation: ghostBob 2.4s ease-in-out infinite;
+      }
+
+      .nav-pill-dark {
+        background: rgba(15, 23, 42, 0.72);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+      }
+
+      .nav-pill-light {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
+      }
+
+      /* ==================== DATA UNIVERSE & EKA WAHYU HERO STYLING ==================== */
+      .bg-data-grid {
+        background-color: #040714;
+        background-image:
+          radial-gradient(
+            circle at 18% 22%,
+            rgba(37, 99, 235, 0.22),
+            transparent 38%
+          ),
+          radial-gradient(
+            circle at 82% 28%,
+            rgba(124, 58, 237, 0.2),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 50% 80%,
+            rgba(6, 182, 212, 0.16),
+            transparent 45%
+          ),
+          linear-gradient(
+            to right,
+            rgba(148, 163, 184, 0.06) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(148, 163, 184, 0.06) 1px,
+            transparent 1px
+          );
+        background-size:
+          100% 100%,
+          100% 100%,
+          100% 100%,
+          44px 44px,
+          44px 44px;
+      }
+
+      .text-gradient-eka {
+        background: linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #93c5fd 35%,
+          #818cf8 68%,
+          #22d3ee 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @keyframes floatSlow {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      .animate-float-slow {
+        animation: floatSlow 5s ease-in-out infinite;
+      }
+
+      @keyframes pulseDataBar {
+        0%,
+        100% {
+          transform: scaleY(0.85);
+          opacity: 0.8;
+        }
+        50% {
+          transform: scaleY(1.08);
+          opacity: 1;
+        }
+      }
+      .data-bar-anim {
+        transform-origin: bottom;
+        animation: pulseDataBar 2.6s ease-in-out infinite;
+      }
+
+      /* ==================== SPIDER-MAN CURSOR REVEAL PORTRAIT EFFECT ==================== */
+      #spiderman-portrait-stage {
+        --spidey-x: 50%;
+        --spidey-y: 42%;
+        --spidey-r: 0px;
+        position: relative;
+        overflow: hidden;
+        cursor: crosshair;
+        user-select: none;
+      }
+
+      #spiderman-portrait-stage:hover {
+        --spidey-r: 125px;
+      }
+
+      /* Red Crimson Aura Spotlight following cursor like video 00:07-00:13 */
+      .spidey-red-aura {
+        background: radial-gradient(
+          circle 165px at var(--spidey-x, 50%) var(--spidey-y, 42%),
+          rgba(239, 68, 68, 0.72) 0%,
+          rgba(220, 38, 38, 0.38) 42%,
+          rgba(37, 99, 235, 0.15) 68%,
+          transparent 82%
+        );
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+      #spiderman-portrait-stage:hover .spidey-red-aura,
+      #spiderman-portrait-stage.spidey-locked .spidey-red-aura {
+        opacity: 1;
+      }
+
+      /* Spider-Man Layer Masked by Cursor Circle OR Full Reveal Mode */
+      .spidey-reveal-layer {
+        clip-path: circle(
+          var(--spidey-r, 0px) at var(--spidey-x, 50%) var(--spidey-y, 42%)
+        );
+        transition: clip-path 0.08s ease-out;
+        will-change: clip-path;
+      }
+
+      #spiderman-portrait-stage.spidey-full-mode:hover .spidey-reveal-layer,
+      #spiderman-portrait-stage.spidey-locked .spidey-reveal-layer {
+        clip-path: circle(140% at 50% 50%) !important;
+        transition: clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      /* Spider-Man Hover Effect inside Lanyard Photo too */
+      .lanyard-photo-box .lanyard-spidey-overlay {
+        clip-path: circle(0% at 50% 45%);
+        transition: clip-path 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .lanyard-photo-box:hover .lanyard-spidey-overlay {
+        clip-path: circle(130% at 50% 45%);
+      }
+
+      /* ==================== INTERACTIVE PHYSICS LANYARD ID CARD ==================== */
+      #lanyard-stage {
+        position: relative;
+        height: 490px;
+        user-select: none;
+        touch-action: none;
+        perspective: 1200px;
+      }
+
+      #lanyard-spotlight {
+        background: radial-gradient(
+          circle 180px at var(--spot-x, 50%) var(--spot-y, 55%),
+          rgba(239, 68, 68, 0.48),
+          rgba(37, 99, 235, 0.24) 55%,
+          transparent 78%
+        );
+        mix-blend-mode: screen;
+        transition: opacity 0.25s ease;
+      }
+
+      #lanyard-card-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 228px;
+        height: 326px;
+        transform-origin: 50% 0%;
+        will-change: transform;
+        cursor: grab;
+        z-index: 25;
+        transform-style: preserve-3d;
+      }
+      #lanyard-card-wrapper:active {
+        cursor: grabbing;
+      }
+
+      .lanyard-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .lanyard-card-inner.is-flipped {
+        transform: rotateY(180deg);
+      }
+
+      .lanyard-face {
+        position: absolute;
+        inset: 0;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow:
+          0 25px 60px rgba(0, 0, 0, 0.75),
+          0 0 0 1px rgba(255, 255, 255, 0.18);
+      }
+      .lanyard-face-back {
+        transform: rotateY(180deg);
+      }
+
+      /* Holographic Glare Overlay on ID Card */
+      .holo-shimmer {
+        background: linear-gradient(
+          125deg,
+          transparent 20%,
+          rgba(56, 189, 248, 0.16) 36%,
+          rgba(244, 63, 94, 0.18) 48%,
+          rgba(250, 204, 21, 0.14) 60%,
+          transparent 76%
+        );
+        background-size: 220% 220%;
+        mix-blend-mode: color-dodge;
+        pointer-events: none;
+      }
+
+      /* ==================== 3D INTERACTIVE FOLDERS (PROJECTS / CERTIFICATES / AWARDS) ==================== */
+      .folder-3d-wrap {
+        perspective: 1100px;
+      }
+      .folder-back {
+        background: linear-gradient(
+          180deg,
+          rgba(30, 41, 59, 0.92) 0%,
+          rgba(15, 23, 42, 0.96) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      }
+      .folder-tab-ear {
+        background: rgba(30, 41, 59, 0.95);
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        border-left: 1px solid rgba(255, 255, 255, 0.14);
+        border-right: 1px solid rgba(255, 255, 255, 0.14);
+      }
+      .folder-front-flap {
+        background: linear-gradient(
+          165deg,
+          rgba(255, 255, 255, 0.14) 0%,
+          rgba(30, 41, 59, 0.78) 45%,
+          rgba(15, 23, 42, 0.92) 100%
+        );
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transform-origin: bottom center;
+        transition:
+          transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.45s ease;
+      }
+      .folder-paper {
+        transition:
+          transform 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 0.38s ease;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+      }
+      .folder-3d-wrap:hover .folder-front-flap {
+        transform: rotateX(-28deg) translateY(4px);
+        box-shadow: 0 25px 50px rgba(37, 99, 235, 0.22);
+        border-color: rgba(96, 165, 250, 0.4);
+      }
+      .folder-3d-wrap:hover .paper-left {
+        transform: translate(-34px, -54px) rotate(-12deg) scale(1.04);
+      }
+      .folder-3d-wrap:hover .paper-center {
+        transform: translate(0px, -68px) rotate(0deg) scale(1.06);
+      }
+      .folder-3d-wrap:hover .paper-right {
+        transform: translate(34px, -52px) rotate(12deg) scale(1.04);
+      }
+
+      /* ==================== HORIZONTAL CAROUSEL SCROLLBAR HIDE ==================== */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Giant Transition Text */
+      .giant-portofolio-title {
+        font-size: clamp(3.4rem, 13.8vw, 13.5rem);
+        line-height: 0.84;
+        letter-spacing: -0.04em;
+      }
+    </style>
+  </head>
+  <body class="edit-slots-active selection:bg-blue-600 selection:text-white">
+    <!-- ==================== EKA WAHYU STYLE WELCOME SPLASH SCREEN ==================== -->
+    <div
+      id="eka-splash"
+      class="fixed inset-0 z-[100] bg-[#040714] flex flex-col items-center justify-center px-4 transition-all duration-700"
+    >
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-blue-600/20 blur-[130px]"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-purple-600/20 blur-[130px]"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col items-center text-center max-w-xl space-y-6"
+      >
+        <!-- 3 Floating Data / Code / CRM Icons like Eka Wahyu Splash -->
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-blue-500/15 border border-blue-400/30 flex items-center justify-center text-blue-400 shadow-lg shadow-blue-500/20 animate-bounce"
+            style="animation-delay: 0s"
+          >
+            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+          </div>
+          <div
+            class="w-12 h-12 rounded-2xl bg-indigo-500/15 border border-indigo-400/30 flex items-center justify-center text-indigo-400 shadow-lg shadow-indigo-500/20 animate-bounce"
+            style="animation-delay: 0.15s"
+          >
+            <i data-lucide="database" class="w-6 h-6"></i>
+          </div>
+          <div
+            class="w-12 h-12 rounded-2xl bg-cyan-500/15 border border-cyan-400/30 flex items-center justify-center text-cyan-400 shadow-lg shadow-cyan-500/20 animate-bounce"
+            style="animation-delay: 0.3s"
+          >
+            <i data-lucide="code-2" class="w-6 h-6"></i>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <h2
+            class="font-display text-3xl sm:text-5xl font-black tracking-tight text-white"
+          >
+            Welcome To My<br />
+            <span class="text-gradient-eka">Portfolio Website</span>
+          </h2>
+          <p class="font-mono text-xs sm:text-sm text-slate-400">
+            Dimas Maycardo Sihotang &bull; Information Systems &amp; Data
+            Enthusiast
+          </p>
+        </div>
+
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-xs font-mono text-cyan-300"
+        >
+          <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+          <span>dimasmaycardo-portfolio.vercel.app</span>
+        </div>
+
+        <div class="w-full max-w-xs space-y-2 pt-2">
+          <div
+            class="flex items-center justify-between font-mono text-[11px] text-slate-400"
+          >
+            <span>INITIALIZING PORTFOLIO</span>
+            <span id="loading-percentage" class="text-cyan-300">0%</span>
+          </div>
+          <div class="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+            <div
+              id="loading-progress"
+              class="h-full w-0 rounded-full bg-gradient-to-r from-blue-500 via-indigo-400 to-cyan-300 transition-[width] duration-100"
+            ></div>
+          </div>
+          <p class="text-[10px] font-mono text-slate-500">
+            Preparing your experience...
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== FLOATING PILL NAVBAR WITH GHOST MASCOT ==================== -->
+    <header
+      class="fixed top-6 left-0 right-0 z-50 flex justify-center pointer-events-none px-4"
+    >
+      <div
+        id="nav-container"
+        class="relative pointer-events-auto nav-pill-dark rounded-full p-1.5 flex items-center gap-1 transition-colors duration-300"
+      >
+        <!-- Cute Animated White Ghost Mascot Sitting Above Active Tab -->
+        <div
+          id="ghost-mascot"
+          class="absolute -top-8 left-0 w-9 h-9 pointer-events-none flex items-center justify-center"
+        >
+          <div class="ghost-inner-bob">
+            <svg
+              width="34"
+              height="36"
+              viewBox="0 0 34 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 2C9.268 2 3 8.268 3 16V31.5C3 32.8 4.5 33.5 5.5 32.6L8.2 30.2C9.1 29.4 10.5 29.4 11.4 30.2L13.6 32.2C14.6 33.1 16.1 33.1 17 32.2L19.4 30.2C20.3 29.4 21.7 29.4 22.6 30.2L25.4 32.6C26.5 33.5 28 32.8 28 31.5V16C28 8.268 24.732 2 17 2Z"
+                fill="white"
+                stroke="#0f172a"
+                stroke-width="1.5"
+              />
+              <ellipse cx="13" cy="15" rx="2.1" ry="3" fill="#0f172a" />
+              <ellipse cx="20.5" cy="15" rx="2.1" ry="3" fill="#0f172a" />
+              <circle cx="12.3" cy="14" r="0.7" fill="white" />
+              <circle cx="19.8" cy="14" r="0.7" fill="white" />
+              <ellipse
+                cx="10"
+                cy="18.5"
+                rx="1.6"
+                ry="0.9"
+                fill="#fda4af"
+                opacity="0.75"
+              />
+              <ellipse
+                cx="23.5"
+                cy="18.5"
+                rx="1.6"
+                ry="0.9"
+                fill="#fda4af"
+                opacity="0.75"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <a
+          href="#home"
+          data-nav="home"
+          onclick="setActiveNav('home')"
+          class="nav-pill-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-royalBlue text-white shadow-md"
+        >
+          Home
+        </a>
+        <a
+          href="#about"
+          data-nav="about"
+          onclick="setActiveNav('about')"
+          class="nav-pill-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 text-slate-300 hover:text-white"
+        >
+          About
+        </a>
+        <a
+          href="#portfolio"
+          data-nav="portfolio"
+          onclick="setActiveNav('portfolio')"
+          class="nav-pill-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 text-slate-300 hover:text-white"
+        >
+          Portfolio
+        </a>
+        <a
+          href="#contact"
+          data-nav="contact"
+          onclick="setActiveNav('contact')"
+          class="nav-pill-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 text-slate-300 hover:text-white"
+        >
+          Contact
+        </a>
+      </div>
+    </header>
+
+    <!-- ==================== 1. DATA ANALYTICS & EKA WAHYU STYLE HERO SECTION ==================== -->
+    <section
+      id="home"
+      class="relative w-full min-h-screen bg-data-grid pt-28 pb-20 overflow-hidden flex flex-col justify-between"
+    >
+      <!-- Floating Background Data Formulas & Nodes -->
+      <div
+        class="absolute inset-0 pointer-events-none overflow-hidden select-none"
+      >
+        <div
+          class="hidden sm:block absolute top-28 left-[6%] font-mono text-[11px] text-blue-400/30 bg-blue-500/[0.04] border border-blue-400/10 px-3 py-1 rounded-lg"
+        >
+          SELECT * FROM customer_retention WHERE crm = 'HubSpot' AND status =
+          'Active';
+        </div>
+        <div
+          class="hidden md:block absolute top-36 right-[7%] font-mono text-[11px] text-cyan-400/30 bg-cyan-500/[0.04] border border-cyan-400/10 px-3 py-1 rounded-lg"
+        >
+          =XLOOKUP(Client_ID, Data_Segment!A:A, Retention_Score!F:F)
+        </div>
+        <div
+          class="hidden lg:block absolute bottom-28 left-[8%] font-mono text-[11px] text-indigo-400/30 bg-indigo-500/[0.04] border border-indigo-400/10 px-3 py-1 rounded-lg"
+        >
+          [DQLab Analytics] &bull; Data Cleaning &bull; Pivot KPI &bull; Jadwal
+          Real-Time Validation
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 my-auto space-y-10"
+      >
+        <!-- Centerpiece Data-Themed "WELCOME TO MY PORTFOLIO" Banner -->
+        <div id="parallax-title" class="text-center space-y-3 pt-2">
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/25 text-xs font-mono text-cyan-300 shadow-lg"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"
+              ></span>
+            </span>
+            <span
+              >READY TO ANALYZE &amp; INNOVATE // DATA &amp; INFORMATION
+              SYSTEMS</span
+            >
+          </div>
+
+          <h1
+            class="font-display font-black uppercase tracking-tight leading-[0.95] text-gradient-eka drop-shadow-[0_10px_35px_rgba(37,99,235,0.35)]"
+            style="font-size: clamp(2.35rem, 6.2vw, 5.4rem)"
+          >
+            WELCOME TO MY PORTFOLIO
+          </h1>
+        </div>
+
+        <!-- Eka Wahyu Style 2-Column Hero Content: Left Intro & Typewriter + Right 3D Data Analytics Dashboard -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pt-2">
+          <!-- Left Column (7 Cols): Role, Typewriter, Tagline, Tech Pills, CTA Buttons, Mini Stats -->
+          <div class="lg:col-span-7 space-y-6 text-left">
+            <div class="space-y-2">
+              <div
+                class="text-xs sm:text-sm font-mono uppercase tracking-widest text-blue-400"
+              >
+                DIMAS MAYCARDO SIHOTANG &bull; UNIVERSITAS INDRAPRASTA PGRI
+              </div>
+              <h2
+                class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.12]"
+              >
+                Information Systems &amp;<br />
+                <span class="text-gradient-eka">Data-Driven Solutions</span>
+              </h2>
+
+              <!-- Dynamic Typewriter Line (Like Eka Wahyu Portfolio) -->
+              <div
+                class="flex items-center gap-2 pt-1 font-mono text-base sm:text-xl text-cyan-300 font-semibold min-h-[32px]"
+              >
+                <span class="text-blue-400">&gt;</span>
+                <span id="eka-typewriter"
+                  >Data Analyst Enthusiast (Excel &amp; SQL)</span
+                >
+                <span class="w-0.5 h-5 bg-cyan-400 animate-pulse"></span>
+              </div>
+            </div>
+
+            <p
+              class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl"
+            >
+              Mahasiswa Sistem Informasi semester 7 yang menggabungkan analisis
+              data (<strong class="text-white"
+                >Excel Data Analyst &amp; MySQL</strong
+              >), pengelolaan retensi pelanggan (<strong class="text-white"
+                >HubSpot CRM</strong
+              >), pengembangan
+              <strong class="text-white">Front-End Web</strong>, serta
+              komunikasi publik sebagai
+              <strong class="text-white">Master of Ceremony (MC)</strong> untuk
+              menghadirkan solusi digital yang fungsional dan berdampak.
+            </p>
+
+            <!-- Core Data & Tech Badges -->
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 rounded-xl bg-white/[0.05] border border-white/10 text-xs font-mono text-cyan-300 flex items-center gap-1.5"
+              >
+                <i
+                  data-lucide="bar-chart-2"
+                  class="w-3.5 h-3.5 text-cyan-400"
+                ></i>
+                Data Analyst (Excel)
+              </span>
+              <span
+                class="px-3 py-1.5 rounded-xl bg-white/[0.05] border border-white/10 text-xs font-mono text-blue-300 flex items-center gap-1.5"
+              >
+                <i data-lucide="users" class="w-3.5 h-3.5 text-blue-400"></i>
+                HubSpot CRM
+              </span>
+              <span
+                class="px-3 py-1.5 rounded-xl bg-white/[0.05] border border-white/10 text-xs font-mono text-indigo-300 flex items-center gap-1.5"
+              >
+                <i data-lucide="code" class="w-3.5 h-3.5 text-indigo-400"></i>
+                HTML/CSS/JS/PHP/MySQL
+              </span>
+              <span
+                class="px-3 py-1.5 rounded-xl bg-white/[0.05] border border-white/10 text-xs font-mono text-purple-300 flex items-center gap-1.5"
+              >
+                <i data-lucide="mic" class="w-3.5 h-3.5 text-purple-400"></i>
+                Public Speaking &amp; MC
+              </span>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-3.5 pt-1">
+              <a
+                href="#portfolio"
+                class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-royalBlue via-indigo-600 to-blue-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-sm shadow-xl shadow-blue-600/25 border border-white/15 transition transform hover:-translate-y-0.5"
+              >
+                <span>Lihat Projek &amp; Data</span>
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+              </a>
+              <a
+                href="#about"
+                class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-white/[0.06] hover:bg-white/[0.12] text-white font-semibold text-sm border border-white/15 transition transform hover:-translate-y-0.5"
+              >
+                <span>Perkenalan</span>
+                <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+              </a>
+              <a
+                id="cv-link-hero"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-amber-400/15 hover:bg-amber-400/25 text-amber-300 font-mono text-xs font-bold border border-amber-400/40 transition"
+              >
+                <i data-lucide="file-text" class="w-4 h-4"></i>
+                <span>Review CV</span>
+              </a>
+            </div>
+
+            <!-- Eka Wahyu Style 3 Quick Stat Cards -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-3 max-w-xl">
+              <a
+                href="#portfolio"
+                onclick="switchPortfolioCategory('projects')"
+                class="p-3.5 rounded-2xl bg-[#0c1326]/85 border border-white/10 hover:border-blue-400/50 transition group"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-display text-2xl sm:text-3xl font-extrabold text-white group-hover:text-cyan-300 transition"
+                    >3</span
+                  >
+                  <i data-lucide="code-2" class="w-4 h-4 text-blue-400"></i>
+                </div>
+                <div
+                  class="text-[11px] font-mono uppercase text-slate-400 mt-1"
+                >
+                  Total Projects
+                </div>
+              </a>
+              <a
+                href="#portfolio"
+                onclick="switchPortfolioCategory('certificates')"
+                class="p-3.5 rounded-2xl bg-[#0c1326]/85 border border-white/10 hover:border-indigo-400/50 transition group"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-display text-2xl sm:text-3xl font-extrabold text-white group-hover:text-indigo-300 transition"
+                    >3</span
+                  >
+                  <i data-lucide="award" class="w-4 h-4 text-indigo-400"></i>
+                </div>
+                <div
+                  class="text-[11px] font-mono uppercase text-slate-400 mt-1"
+                >
+                  Certificates
+                </div>
+              </a>
+              <a
+                href="#about"
+                class="p-3.5 rounded-2xl bg-[#0c1326]/85 border border-white/10 hover:border-cyan-400/50 transition group"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-display text-2xl sm:text-3xl font-extrabold text-white group-hover:text-emerald-300 transition"
+                    >3.50</span
+                  >
+                  <i
+                    data-lucide="trending-up"
+                    class="w-4 h-4 text-emerald-400"
+                  ></i>
+                </div>
+                <div
+                  class="text-[11px] font-mono uppercase text-slate-400 mt-1"
+                >
+                  IPK / 4.00 (SI)
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column (5 Cols): Interactive 3D Tilt Data Analytics & CRM Command Center Card -->
+          <div class="lg:col-span-5">
+            <div
+              id="data-hero-card"
+              class="relative rounded-3xl bg-[#0b1224]/90 backdrop-blur-xl border border-white/15 p-5 sm:p-6 shadow-[0_25px_70px_rgba(0,0,0,0.65)] transition-transform duration-200 ease-out"
+            >
+              <!-- Top Window Bar -->
+              <div
+                class="flex items-center justify-between border-b border-white/10 pb-3.5 mb-4"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                  <span class="ml-2 font-mono text-xs text-slate-300"
+                    >dimas_analytics_crm.dashboard</span
+                  >
+                </div>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 font-mono text-[10px] text-emerald-300"
+                >
+                  LIVE DATA
+                </span>
+              </div>
+
+              <!-- Interactive Metric Switcher Tabs inside Data Card -->
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div
+                  class="p-3 rounded-2xl bg-white/[0.04] border border-white/10"
+                >
+                  <div class="text-[10px] font-mono text-slate-400">
+                    HUBSPOT CRM
+                  </div>
+                  <div
+                    class="font-display text-lg font-extrabold text-cyan-300 mt-0.5"
+                  >
+                    94.8%
+                  </div>
+                  <div class="text-[10px] text-emerald-400 font-mono">
+                    ↑ Retention
+                  </div>
+                </div>
+                <div
+                  class="p-3 rounded-2xl bg-white/[0.04] border border-white/10"
+                >
+                  <div class="text-[10px] font-mono text-slate-400">
+                    DQLAB EXCEL
+                  </div>
+                  <div
+                    class="font-display text-lg font-extrabold text-blue-300 mt-0.5"
+                  >
+                    Cleaned
+                  </div>
+                  <div class="text-[10px] text-blue-300 font-mono">
+                    Bootcamp '25
+                  </div>
+                </div>
+                <div
+                  class="p-3 rounded-2xl bg-white/[0.04] border border-white/10"
+                >
+                  <div class="text-[10px] font-mono text-slate-400">
+                    GEN-AI SKILL
+                  </div>
+                  <div
+                    class="font-display text-lg font-extrabold text-amber-300 mt-0.5"
+                  >
+                    Great Work
+                  </div>
+                  <div class="text-[10px] text-amber-200 font-mono">
+                    APAC 2026
+                  </div>
+                </div>
+              </div>
+
+              <!-- Animated Bar Chart & Data Stream Visualization -->
+              <div
+                class="p-4 rounded-2xl bg-[#070c18] border border-white/10 space-y-3"
+              >
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-mono text-slate-300"
+                    >Data Pipeline &amp; Web Scheduling Metrics</span
+                  >
+                  <span class="font-mono text-[11px] text-cyan-400"
+                    >0 Bentrok Jadwal</span
+                  >
+                </div>
+
+                <!-- Animated Bars -->
+                <div
+                  class="h-28 flex items-end justify-between gap-2 pt-4 px-1"
+                >
+                  <div
+                    class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end"
+                  >
+                    <div
+                      class="w-full bg-gradient-to-t from-blue-600 to-cyan-400 rounded-t-lg data-bar-anim h-[78%]"
+                      style="animation-delay: 0s"
+                    ></div>
+                    <span class="text-[9px] font-mono text-slate-400"
+                      >Excel</span
+                    >
+                  </div>
+                  <div
+                    class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end"
+                  >
+                    <div
+                      class="w-full bg-gradient-to-t from-indigo-600 to-blue-400 rounded-t-lg data-bar-anim h-[92%]"
+                      style="animation-delay: 0.2s"
+                    ></div>
+                    <span class="text-[9px] font-mono text-slate-400">CRM</span>
+                  </div>
+                  <div
+                    class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end"
+                  >
+                    <div
+                      class="w-full bg-gradient-to-t from-purple-600 to-indigo-400 rounded-t-lg data-bar-anim h-[86%]"
+                      style="animation-delay: 0.4s"
+                    ></div>
+                    <span class="text-[9px] font-mono text-slate-400"
+                      >Web SI</span
+                    >
+                  </div>
+                  <div
+                    class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end"
+                  >
+                    <div
+                      class="w-full bg-gradient-to-t from-cyan-600 to-emerald-400 rounded-t-lg data-bar-anim h-[80%]"
+                      style="animation-delay: 0.6s"
+                    ></div>
+                    <span class="text-[9px] font-mono text-slate-400"
+                      >MySQL</span
+                    >
+                  </div>
+                  <div
+                    class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end"
+                  >
+                    <div
+                      class="w-full bg-gradient-to-t from-amber-500 to-yellow-300 rounded-t-lg data-bar-anim h-[95%]"
+                      style="animation-delay: 0.8s"
+                    ></div>
+                    <span class="text-[9px] font-mono text-slate-400"
+                      >MC/PO</span
+                    >
+                  </div>
+                  <div
+                    class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end"
+                  >
+                    <div
+                      class="w-full bg-gradient-to-t from-rose-600 to-pink-400 rounded-t-lg data-bar-anim h-[88%]"
+                      style="animation-delay: 1s"
+                    ></div>
+                    <span class="text-[9px] font-mono text-slate-400"
+                      >Gen-AI</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Code / SQL Terminal Footer inside Card -->
+              <div
+                class="mt-4 p-3 rounded-xl bg-white/[0.03] border border-white/10 font-mono text-[11px] text-slate-300 space-y-1"
+              >
+                <div
+                  class="flex items-center justify-between text-[10px] text-slate-400"
+                >
+                  <span>STATUS: OPEN FOR COLLABORATION</span>
+                  <span class="text-cyan-400">Jakarta, ID</span>
+                </div>
+                <div class="truncate text-cyan-300">
+                  &gt; analyst.profile("Dimas Maycardo Sihotang")
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Scroll Prompt -->
+      <div class="relative z-10 flex justify-center pt-8">
+        <a
+          href="#about"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-xs font-mono text-slate-300 transition"
+        >
+          <span
+            >Scroll ke Perkenalan (Spider-Man Hover &amp; Lanyard
+            Interaktif)</span
+          >
+          <i
+            data-lucide="chevron-down"
+            class="w-4 h-4 text-cyan-400 animate-bounce"
+          ></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== 2. DARK TOPOGRAPHIC ABOUT SECTION: SPIDER-MAN HOVER PORTRAIT + INTERACTIVE SWINGING LANYARD ==================== -->
+    <section
+      id="about"
+      class="relative bg-topo-dark pt-20 pb-8 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        <!-- 2A. 3-Column Intro: Left Name & CV | Center BOTH Spider-Man Hover Portrait + Swinging Physics Lanyard | Right Bio -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Left Column (3 Cols): Hi, I'm Dimas Maycardo Sihotang + View CV Button -->
+          <div class="lg:col-span-3 space-y-5 text-left z-20">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/15 border border-red-500/30 text-[11px] font-mono text-red-300"
+            >
+              <span>🕷️ Arahkan Kursor ke Foto &amp; Tarik Lanyard</span>
+            </div>
+
+            <div class="space-y-1">
+              <h2
+                class="font-display text-4xl sm:text-5xl font-extrabold text-royalBlue tracking-tight"
+              >
+                Hi, I'm
+              </h2>
+              <h3
+                class="font-display text-3xl sm:text-4xl xl:text-5xl font-extrabold text-white tracking-tight leading-[1.12]"
+              >
+                Dimas Maycardo Sihotang
+              </h3>
+            </div>
+
+            <!-- ========================================================================= -->
+            <!-- Tombol untuk membuka CV di Google Drive -->
+            <div class="pt-1 flex flex-wrap items-center gap-3">
+              <a
+                id="cv-link-about"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="relative inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-royalBlue hover:bg-royalBlueHover text-white font-semibold text-sm shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5"
+              >
+                <i data-lucide="file-text" class="w-4 h-4"></i>
+                <span>Review CV</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Center Column (6 Cols): DUAL INTERACTIVE SHOWCASE (1. SPIDER-MAN CURSOR HOVER PORTRAIT + 2. SWINGING PHYSICS LANYARD) -->
+          <div class="lg:col-span-6 z-20 space-y-4">
+            <!-- Mode / View Controls Above Center Showcase -->
+            <div class="flex flex-wrap items-center justify-center gap-2">
+              <button
+                id="spidey-mode-btn"
+                onclick="toggleSpideyRevealMode()"
+                class="px-3.5 py-1.5 rounded-full bg-red-600/25 hover:bg-red-600/40 border border-red-500/40 text-red-200 text-[11px] font-mono font-semibold flex items-center gap-1.5 cursor-pointer transition"
+              >
+                <span>🕷️ Efek Kursor:</span>
+                <span id="spidey-mode-label" class="text-white underline"
+                  >Lens Kursor Spider-Man</span
+                >
+              </button>
+              <button
+                onclick="toggleSpideyLock()"
+                id="spidey-lock-btn"
+                class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-slate-200 text-[11px] font-mono flex items-center gap-1.5 cursor-pointer transition"
+              >
+                <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span id="spidey-lock-label">Tahan Mode Spider-Man: OFF</span>
+              </button>
+            </div>
+
+            <!-- Side-by-Side Interactive Center Grid: Left = Spider-Man Hover Portrait (00:07-00:13) | Right = Swinging Physics Lanyard -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              <!-- PART A: SPIDER-MAN CURSOR HOVER / REVEAL PORTRAIT STAGE (Matching Video 00:07 - 00:13) -->
+              <div class="flex flex-col items-center">
+                <div
+                  id="spiderman-portrait-stage"
+                  class="relative w-full max-w-[290px] h-[390px] rounded-3xl bg-gradient-to-b from-[#0b1329]/80 via-[#070d1d]/90 to-[#050a18] border border-white/15 shadow-2xl flex items-end justify-center"
+                >
+                  <!-- Crimson Red Spotlight Aura Following Mouse Cursor -->
+                  <div
+                    class="spidey-red-aura absolute inset-0 pointer-events-none z-10"
+                  ></div>
+
+                  <!-- Top Badge Hint -->
+                  <div
+                    class="absolute top-3.5 left-3.5 right-3.5 z-30 flex items-center justify-between pointer-events-none"
+                  >
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-black/55 backdrop-blur-md border border-white/10 font-mono text-[10px] text-slate-200"
+                    >
+                      Geser Mouse ke Foto 🕷️
+                    </span>
+                  </div>
+
+                  <!-- LAYER 1 (BASE): NORMAL FORMAL PORTRAIT OF DIMAS MAYCARDO SIHOTANG -->
+                  <div
+                    class="relative z-10 w-full h-full flex items-end justify-center overflow-hidden"
+                  >
+                    <img
+                      id="spidey-base-img"
+                      src=""
+                      alt="Dimas Maycardo Sihotang"
+                      class="hidden w-full h-full object-cover object-top"
+                    />
+
+                    <!-- Built-in Formal Suit Portrait SVG -->
+                    <div
+                      id="spidey-base-fallback"
+                      class="w-full h-full flex items-end justify-center pt-8"
+                    >
+                      <svg
+                        class="w-64 h-80 drop-shadow-[0_16px_32px_rgba(0,0,0,0.85)]"
+                        viewBox="0 0 260 320"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <!-- Suit Shoulders & Blazer -->
+                        <path
+                          d="M24 320 L44 184 C50 166, 80 155, 114 155 L146 155 C180 155, 210 166, 216 184 L236 320 Z"
+                          fill="#0f172a"
+                        />
+                        <!-- Dark Shirt & Tie -->
+                        <polygon
+                          points="112,155 130,250 148,155"
+                          fill="#1e293b"
+                        />
+                        <polygon
+                          points="125,168 135,168 138,242 130,254 122,242"
+                          fill="#2563eb"
+                        />
+                        <!-- Suit Lapels -->
+                        <path
+                          d="M92 155 L130 250 L108 262 L78 172 Z"
+                          fill="#172033"
+                        />
+                        <path
+                          d="M168 155 L130 250 L152 262 L182 172 Z"
+                          fill="#172033"
+                        />
+                        <!-- Neck -->
+                        <rect
+                          x="114"
+                          y="132"
+                          width="32"
+                          height="30"
+                          rx="6"
+                          fill="#c59477"
+                        />
+                        <!-- Ears -->
+                        <ellipse
+                          cx="81"
+                          cy="96"
+                          rx="7"
+                          ry="12"
+                          fill="#c59477"
+                        />
+                        <ellipse
+                          cx="179"
+                          cy="96"
+                          rx="7"
+                          ry="12"
+                          fill="#c59477"
+                        />
+                        <!-- Face -->
+                        <circle cx="130" cy="92" r="48" fill="#d6a78a" />
+                        <!-- Hair (Middle-parted neat dark hair like CV photo) -->
+                        <path
+                          d="M80 86 C76 34, 184 34, 180 86 C174 58, 146 48, 130 58 C114 48, 86 58, 80 86 Z"
+                          fill="#0f1420"
+                        />
+                        <!-- Eyebrows & Eyes -->
+                        <path
+                          d="M102 80 Q112 75 122 80"
+                          stroke="#111827"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M138 80 Q148 75 158 80"
+                          stroke="#111827"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                        <ellipse
+                          cx="112"
+                          cy="91"
+                          rx="4.5"
+                          ry="3.2"
+                          fill="#111827"
+                        />
+                        <ellipse
+                          cx="148"
+                          cy="91"
+                          rx="4.5"
+                          ry="3.2"
+                          fill="#111827"
+                        />
+                        <circle cx="110.5" cy="90" r="1" fill="white" />
+                        <circle cx="146.5" cy="90" r="1" fill="white" />
+                        <!-- Nose & Confident Smile -->
+                        <path
+                          d="M130 93 L127 105 L133 106"
+                          stroke="#9c6b53"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M118 115 Q130 122 142 115"
+                          stroke="#7c4a3a"
+                          stroke-width="2.6"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- LAYER 2 (SPIDER-MAN REVEAL OVERLAY ON CURSOR HOVER - Matching Video 00:08 - 00:13) -->
+                  <div
+                    class="spidey-reveal-layer absolute inset-0 z-20 w-full h-full flex items-end justify-center bg-gradient-to-b from-[#2a0712]/90 via-[#450a18]/90 to-[#090d1a] pointer-events-none"
+                  >
+                    <!-- Optional Spider-Man image loaded from the assets folder -->
+                    <img
+                      id="spidey-custom-img"
+                      src=""
+                      alt="Spider-Man Mode"
+                      class="hidden w-full h-full object-cover object-top"
+                    />
+
+                    <!-- Built-in Detailed Spider-Man Transformation SVG (Suit + Mask + Webbing + Glowing Eyes) -->
+                    <div
+                      id="spidey-svg-fallback"
+                      class="w-full h-full flex items-end justify-center pt-8 relative"
+                    >
+                      <!-- Background Spider Web Geometry -->
+                      <svg
+                        class="absolute inset-0 w-full h-full opacity-35"
+                        viewBox="0 0 290 390"
+                        fill="none"
+                      >
+                        <circle
+                          cx="145"
+                          cy="140"
+                          r="45"
+                          stroke="#f87171"
+                          stroke-width="1"
+                        />
+                        <circle
+                          cx="145"
+                          cy="140"
+                          r="90"
+                          stroke="#f87171"
+                          stroke-width="1"
+                        />
+                        <circle
+                          cx="145"
+                          cy="140"
+                          r="145"
+                          stroke="#f87171"
+                          stroke-width="1"
+                        />
+                        <line
+                          x1="145"
+                          y1="0"
+                          x2="145"
+                          y2="390"
+                          stroke="#f87171"
+                          stroke-width="1"
+                        />
+                        <line
+                          x1="0"
+                          y1="140"
+                          x2="290"
+                          y2="140"
+                          stroke="#f87171"
+                          stroke-width="1"
+                        />
+                        <line
+                          x1="0"
+                          y1="0"
+                          x2="290"
+                          y2="280"
+                          stroke="#f87171"
+                          stroke-width="1"
+                        />
+                        <line
+                          x1="290"
+                          y1="0"
+                          x2="0"
+                          y2="280"
+                          stroke="#f87171"
+                          stroke-width="1"
+                        />
+                      </svg>
+
+                      <svg
+                        class="relative z-10 w-64 h-80 drop-shadow-[0_0_30px_rgba(239,68,68,0.85)]"
+                        viewBox="0 0 260 320"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <!-- Spider-Man Suit Torso (Red Center & Blue Side Panels) -->
+                        <path
+                          d="M24 320 L44 184 C50 166, 80 155, 114 155 L146 155 C180 155, 210 166, 216 184 L236 320 Z"
+                          fill="#dc2626"
+                        />
+                        <!-- Blue Side Panels -->
+                        <path
+                          d="M24 320 L44 184 C48 174, 62 165, 78 160 L92 320 Z"
+                          fill="#1d4ed8"
+                        />
+                        <path
+                          d="M236 320 L216 184 C212 174, 198 165, 182 160 L168 320 Z"
+                          fill="#1d4ed8"
+                        />
+                        <!-- Suit Webbing Lines on Chest -->
+                        <path
+                          d="M130 155 V320 M102 158 L110 320 M158 158 L150 320"
+                          stroke="#111827"
+                          stroke-width="1.6"
+                          stroke-opacity="0.75"
+                        />
+                        <path
+                          d="M78 190 Q130 212 182 190 M74 225 Q130 248 186 225 M70 262 Q130 285 190 262"
+                          stroke="#111827"
+                          stroke-width="1.6"
+                          stroke-opacity="0.75"
+                          fill="none"
+                        />
+                        <!-- Iconic Black Spider Emblem on Chest -->
+                        <ellipse
+                          cx="130"
+                          cy="222"
+                          rx="9"
+                          ry="13"
+                          fill="#090d16"
+                        />
+                        <circle cx="130" cy="206" r="6" fill="#090d16" />
+                        <path
+                          d="M122 214 L102 198 L96 208 M121 220 L96 218 L92 230 M122 226 L100 238 L98 252 M124 231 L110 256"
+                          stroke="#090d16"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M138 214 L158 198 L164 208 M139 220 L164 218 L168 230 M138 226 L160 238 L162 252 M136 231 L150 256"
+                          stroke="#090d16"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                        <!-- Spider-Man Red Masked Neck & Head -->
+                        <rect
+                          x="112"
+                          y="132"
+                          width="36"
+                          height="30"
+                          rx="6"
+                          fill="#b91c1c"
+                        />
+                        <circle
+                          cx="130"
+                          cy="92"
+                          r="48"
+                          fill="#dc2626"
+                          stroke="#ef4444"
+                          stroke-width="1.5"
+                        />
+                        <!-- Mask Webbing Lines Radiating from Nose Bridge -->
+                        <g
+                          stroke="#111827"
+                          stroke-width="1.5"
+                          stroke-opacity="0.82"
+                          fill="none"
+                        >
+                          <line x1="130" y1="44" x2="130" y2="140" />
+                          <line x1="82" y1="92" x2="178" y2="92" />
+                          <line x1="94" y1="56" x2="166" y2="128" />
+                          <line x1="166" y1="56" x2="94" y2="128" />
+                          <circle cx="130" cy="92" r="18" />
+                          <circle cx="130" cy="92" r="34" />
+                          <circle cx="130" cy="92" r="46" />
+                        </g>
+                        <!-- Iconic Spider-Man White Expressive Lenses with Bold Black Frames -->
+                        <path
+                          d="M92 80 C98 68, 118 74, 124 90 C118 102, 96 98, 92 80 Z"
+                          fill="#ffffff"
+                          stroke="#090d16"
+                          stroke-width="5"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M168 80 C162 68, 142 74, 136 90 C142 102, 164 98, 168 80 Z"
+                          fill="#ffffff"
+                          stroke="#090d16"
+                          stroke-width="5"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Bottom Overlay Caption -->
+                  <div
+                    class="absolute bottom-3 inset-x-3 z-30 flex items-center justify-between px-3 py-1.5 rounded-xl bg-black/65 backdrop-blur-md border border-white/10 text-[10px] font-mono text-slate-300 pointer-events-none"
+                  >
+                    <span>🕷️ SPIDER-SENSE HOVER</span>
+                    <span class="text-red-400 font-bold">ACTIVE</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PART B: INTERACTIVE SWINGING PHYSICS LANYARD ("GOYANG-GOYANG") -->
+              <div class="flex flex-col items-center justify-center">
+                <div
+                  id="lanyard-stage"
+                  class="w-full max-w-[300px] flex flex-col items-center justify-start relative"
+                >
+                  <!-- Crimson & Blue Ambient Spotlight Behind Lanyard -->
+                  <div
+                    id="lanyard-spotlight"
+                    class="absolute inset-0 rounded-3xl pointer-events-none"
+                  ></div>
+
+                  <!-- Top Ceiling Anchor Bracket -->
+                  <div
+                    class="relative z-30 w-12 h-3.5 rounded-b-xl bg-gradient-to-b from-slate-600 to-slate-800 border-x border-b border-white/25 shadow-lg flex items-center justify-center"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"
+                    ></div>
+                  </div>
+
+                  <!-- HTML5 Canvas for Multi-Node Physics Strap & Metal Clasp -->
+                  <canvas
+                    id="lanyard-canvas"
+                    class="absolute inset-0 w-full h-full pointer-events-none z-20"
+                  ></canvas>
+
+                  <!-- 3D Swinging & Draggable ID Card Attached to Physics Bottom Node -->
+                  <div id="lanyard-card-wrapper">
+                    <div id="lanyard-card-inner" class="lanyard-card-inner">
+                      <!-- FRONT FACE OF LANYARD ID CARD -->
+                      <div
+                        class="lanyard-face bg-gradient-to-b from-[#0e172e] via-[#091022] to-[#050914] p-3.5 flex flex-col justify-between text-white border border-white/15"
+                      >
+                        <div class="holo-shimmer absolute inset-0"></div>
+
+                        <!-- Badge Punch Slot & Header -->
+                        <div class="relative z-10 space-y-2">
+                          <div
+                            class="w-11 h-2 mx-auto rounded-full bg-[#03060f] border border-white/20 shadow-inner"
+                          ></div>
+                          <div
+                            class="flex items-center justify-between border-b border-white/10 pb-1.5"
+                          >
+                            <div class="flex items-center gap-1.5">
+                              <span
+                                class="w-2 h-2 rounded-full bg-red-500 animate-pulse"
+                              ></span>
+                              <span
+                                class="font-mono text-[9px] font-bold tracking-wider text-blue-300"
+                                >UNINDRA // DATA &amp; SI</span
+                              >
+                            </div>
+                            <span
+                              class="px-1.5 py-0.5 rounded bg-blue-500/20 border border-blue-400/30 font-mono text-[8px] text-cyan-300"
+                              >ID PASS</span
+                            >
+                          </div>
+                        </div>
+
+                        <!-- ========================================================================= -->
+                        <!-- [GANTI-SENDIRI #2: FOTO PROFIL DI DALAM LANYARD ID CARD + SPIDEY HOVER]   -->
+                        <!-- ========================================================================= -->
+                        <div
+                          class="relative z-10 my-auto flex flex-col items-center"
+                        >
+                          <div
+                            class="lanyard-photo-box relative w-24 h-28 rounded-2xl overflow-hidden bg-gradient-to-b from-red-600/35 via-blue-900/40 to-slate-950 border border-white/20 shadow-inner flex items-end justify-center group"
+                          >
+                            <img
+                              id="main-profile-img"
+                              src=""
+                              alt="Dimas Maycardo Sihotang"
+                              class="hidden w-full h-full object-cover object-top"
+                            />
+
+                            <!-- Default Formal Suit Portrait Vector Illustration -->
+                            <div
+                              id="main-profile-fallback"
+                              class="w-full h-full flex items-end justify-center pt-2"
+                            >
+                              <svg
+                                class="w-22 h-26 drop-shadow-[0_10px_20px_rgba(0,0,0,0.85)]"
+                                viewBox="0 0 260 300"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <circle
+                                  cx="130"
+                                  cy="92"
+                                  r="46"
+                                  fill="#d6a78a"
+                                />
+                                <path
+                                  d="M84 85 C82 39, 178 39, 176 85 C172 61, 145 53, 126 59 C108 55, 88 65, 84 85 Z"
+                                  fill="#111827"
+                                />
+                                <ellipse
+                                  cx="113"
+                                  cy="91"
+                                  rx="4"
+                                  ry="2.8"
+                                  fill="#111827"
+                                />
+                                <ellipse
+                                  cx="147"
+                                  cy="91"
+                                  rx="4"
+                                  ry="2.8"
+                                  fill="#111827"
+                                />
+                                <path
+                                  d="M105 81 Q113 77 121 81"
+                                  stroke="#111827"
+                                  stroke-width="2.5"
+                                  stroke-linecap="round"
+                                />
+                                <path
+                                  d="M139 81 Q147 77 155 81"
+                                  stroke="#111827"
+                                  stroke-width="2.5"
+                                  stroke-linecap="round"
+                                />
+                                <path
+                                  d="M120 113 Q130 119 140 113"
+                                  stroke="#8d5b4c"
+                                  stroke-width="2.5"
+                                  stroke-linecap="round"
+                                />
+                                <rect
+                                  x="114"
+                                  y="133"
+                                  width="32"
+                                  height="26"
+                                  fill="#c59477"
+                                />
+                                <path
+                                  d="M34 300 L52 175 C56 161, 82 151, 114 151 L146 151 C178 151, 204 161, 208 175 L226 300 Z"
+                                  fill="#0f172a"
+                                />
+                                <polygon
+                                  points="114,151 130,232 146,151"
+                                  fill="#1e293b"
+                                />
+                              </svg>
+                            </div>
+
+                            <!-- Spider-Man Hover Overlay inside Lanyard Photo -->
+                            <div
+                              class="lanyard-spidey-overlay absolute inset-0 bg-gradient-to-b from-red-900 to-slate-950 flex items-end justify-center pt-2 pointer-events-none"
+                            >
+                              <svg
+                                class="w-22 h-26"
+                                viewBox="0 0 260 300"
+                                fill="none"
+                              >
+                                <path
+                                  d="M34 300 L52 175 C56 161, 82 151, 114 151 L146 151 C178 151, 204 161, 208 175 L226 300 Z"
+                                  fill="#dc2626"
+                                />
+                                <rect
+                                  x="114"
+                                  y="133"
+                                  width="32"
+                                  height="26"
+                                  fill="#b91c1c"
+                                />
+                                <circle
+                                  cx="130"
+                                  cy="92"
+                                  r="46"
+                                  fill="#dc2626"
+                                />
+                                <path
+                                  d="M92 80 C98 68, 118 74, 124 90 C118 102, 96 98, 92 80 Z"
+                                  fill="#ffffff"
+                                  stroke="#090d16"
+                                  stroke-width="5"
+                                />
+                                <path
+                                  d="M168 80 C162 68, 142 74, 136 90 C142 102, 164 98, 168 80 Z"
+                                  fill="#ffffff"
+                                  stroke="#090d16"
+                                  stroke-width="5"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <h4
+                            class="font-display text-xs font-extrabold text-white tracking-tight mt-2 text-center leading-snug"
+                          >
+                            DIMAS MAYCARDO S.
+                          </h4>
+                          <p
+                            class="font-mono text-[9px] text-cyan-300 text-center"
+                          >
+                            Data &bull; CRM &bull; Front-End &bull; MC
+                          </p>
+                        </div>
+
+                        <!-- Bottom Barcode & ID Meta -->
+                        <div
+                          class="relative z-10 pt-1.5 border-t border-white/10 flex items-center justify-between"
+                        >
+                          <div class="text-[8px] font-mono text-slate-400">
+                            <div>GPA: 3.50/4.00</div>
+                            <div class="text-slate-300">
+                              TARIK &amp; GOYANGKAN
+                            </div>
+                          </div>
+                          <div
+                            class="flex items-center gap-[2px] h-4 opacity-80"
+                          >
+                            <span class="w-[2px] h-full bg-white"></span>
+                            <span class="w-[1px] h-full bg-white"></span>
+                            <span class="w-[3px] h-full bg-white"></span>
+                            <span class="w-[1px] h-full bg-white"></span>
+                            <span class="w-[2px] h-full bg-white"></span>
+                            <span class="w-[3px] h-full bg-white"></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- BACK FACE OF LANYARD ID CARD -->
+                      <div
+                        class="lanyard-face lanyard-face-back bg-gradient-to-b from-[#0b1329] to-[#050914] p-4 flex flex-col justify-between text-white border border-blue-400/30"
+                      >
+                        <div
+                          class="w-11 h-2 mx-auto rounded-full bg-[#03060f] border border-white/20"
+                        ></div>
+
+                        <div class="space-y-2 my-auto">
+                          <div
+                            class="text-[9px] font-mono uppercase tracking-widest text-blue-400 text-center"
+                          >
+                            CORE COMPETENCIES
+                          </div>
+                          <div class="flex flex-wrap gap-1 justify-center">
+                            <span
+                              class="px-2 py-0.5 rounded bg-white/10 text-[8px] font-mono"
+                              >HubSpot CRM</span
+                            >
+                            <span
+                              class="px-2 py-0.5 rounded bg-white/10 text-[8px] font-mono"
+                              >HTML/CSS/JS</span
+                            >
+                            <span
+                              class="px-2 py-0.5 rounded bg-white/10 text-[8px] font-mono"
+                              >PHP &amp; MySQL</span
+                            >
+                            <span
+                              class="px-2 py-0.5 rounded bg-white/10 text-[8px] font-mono"
+                              >Excel Data Analyst</span
+                            >
+                            <span
+                              class="px-2 py-0.5 rounded bg-white/10 text-[8px] font-mono"
+                              >MC &amp; Public Speaking</span
+                            >
+                          </div>
+                          <div
+                            class="p-2 rounded-xl bg-white/[0.04] border border-white/10 text-[9px] font-mono text-slate-300 space-y-1"
+                          >
+                            <div class="truncate">
+                              📧 dimasmaycardo.sihotang@gmail.com
+                            </div>
+                            <div>📱 0812-2271-2957</div>
+                            <div>🐙 github.com/Dimas-May</div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="text-center text-[8px] font-mono text-slate-400 border-t border-white/10 pt-1.5"
+                        >
+                          TARIK &amp; GOYANGKAN KARTU LANYARD INI
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Interactive Lanyard Controls Bar -->
+                <div
+                  class="mt-1 flex flex-wrap items-center justify-center gap-1.5 z-30"
+                >
+                  <button
+                    onclick="nudgeLanyard()"
+                    class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-royalBlue text-white text-[10px] font-mono flex items-center gap-1 border border-white/15 transition cursor-pointer"
+                  >
+                    <i data-lucide="activity" class="w-3 h-3 text-cyan-300"></i>
+                    <span>Goyangkan Lanyard</span>
+                  </button>
+                  <button
+                    onclick="flipLanyardCard()"
+                    class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 text-[10px] font-mono flex items-center gap-1 border border-white/15 transition cursor-pointer"
+                  >
+                    <i data-lucide="repeat" class="w-3 h-3 text-blue-300"></i>
+                    <span>Balik Kartu</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (3 Cols): Bio Paragraph + <> View Projects Button -->
+          <div class="lg:col-span-3 space-y-5 text-left z-20">
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Sebagai mahasiswa Sistem Informasi Universitas Indraprasta PGRI,
+              aku berfokus pada pengembangan teknologi web, pengolahan data,
+              serta implementasi CRM yang tidak hanya fungsional, tetapi juga
+              menghadirkan pengalaman digital dan layanan pelanggan yang menarik
+              serta berdampak.
+            </p>
+
+            <div>
+              <a
+                href="#portfolio"
+                class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-royalBlue hover:bg-royalBlueHover text-white font-semibold text-sm shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5"
+              >
+                <span class="font-mono text-xs">&lt;/&gt;</span>
+                <span>View Projects</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2B. 2-Column Education & Experience Numbered Timeline (00:14 - 00:17) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 pt-4">
+          <!-- Left Column: Education -->
+          <div class="space-y-5">
+            <h3
+              class="font-display text-2xl font-bold text-white tracking-tight"
+            >
+              Education
+            </h3>
+
+            <div class="space-y-4">
+              <!-- Education 1: Universitas Indraprasta PGRI -->
+              <div
+                class="relative rounded-2xl bg-[#0c1326]/90 border border-white/10 hover:border-blue-500/40 p-5 sm:p-6 transition shadow-xl"
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center font-mono text-xs font-bold text-slate-200"
+                      >1</span
+                    >
+                    <div
+                      class="w-7 h-7 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center text-blue-400 font-bold text-xs"
+                    >
+                      U
+                    </div>
+                    <span class="text-sm font-medium text-slate-300"
+                      >Universitas Indraprasta PGRI</span
+                    >
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full bg-white/[0.06] border border-white/10 text-[11px] font-mono text-slate-300 shrink-0"
+                  >
+                    2023 - Present
+                  </span>
+                </div>
+
+                <div class="mt-4 pl-10 space-y-1">
+                  <h4 class="font-display text-lg font-bold text-white">
+                    Bachelor of Information Systems
+                  </h4>
+                  <p class="text-xs text-slate-400">
+                    Jakarta, Indonesia &nbsp;&bull;&nbsp; Undergraduate (GPA
+                    3.50/4.00)
+                  </p>
+                </div>
+              </div>
+
+              <!-- Education 2: SMK Persada Husada Indonesia -->
+              <div
+                class="relative rounded-2xl bg-[#0c1326]/90 border border-white/10 hover:border-blue-500/40 p-5 sm:p-6 transition shadow-xl"
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center font-mono text-xs font-bold text-slate-200"
+                      >2</span
+                    >
+                    <div
+                      class="w-7 h-7 rounded-full bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 font-bold text-xs"
+                    >
+                      S
+                    </div>
+                    <span class="text-sm font-medium text-slate-300"
+                      >SMK Persada Husada Indonesia</span
+                    >
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full bg-white/[0.06] border border-white/10 text-[11px] font-mono text-slate-300 shrink-0"
+                  >
+                    2019 - 2022
+                  </span>
+                </div>
+
+                <div class="mt-4 pl-10 space-y-1">
+                  <h4 class="font-display text-lg font-bold text-white">
+                    Teknik Komputer dan Jaringan
+                  </h4>
+                  <p class="text-xs text-slate-400">
+                    Vocational High School &nbsp;&bull;&nbsp; TKJ (Score
+                    77.77/100)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Experience -->
+          <div class="space-y-5">
+            <h3
+              class="font-display text-2xl font-bold text-white tracking-tight"
+            >
+              Experience
+            </h3>
+
+            <div class="space-y-4">
+              <!-- Experience 1: Front-End Web Developer -->
+              <div
+                class="relative rounded-2xl bg-[#0c1326]/90 border border-white/10 hover:border-blue-500/40 p-5 sm:p-6 transition shadow-xl"
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center font-mono text-xs font-bold text-slate-200"
+                      >1</span
+                    >
+                    <div
+                      class="w-7 h-7 rounded-full bg-indigo-500/20 border border-indigo-400/40 flex items-center justify-center text-indigo-400 font-bold text-xs"
+                    >
+                      FE
+                    </div>
+                    <span class="text-sm font-medium text-slate-300"
+                      >Universitas Indraprasta PGRI</span
+                    >
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full bg-white/[0.06] border border-white/10 text-[11px] font-mono text-slate-300 shrink-0"
+                  >
+                    May 2025 - Jun 2025
+                  </span>
+                </div>
+                <div class="mt-4 pl-10 space-y-1">
+                  <h4 class="font-display text-lg font-bold text-white">
+                    Front-End Web Developer
+                  </h4>
+                  <p class="text-xs text-slate-400">
+                    Sistem Informasi Penjadwalan Kuliah &nbsp;&bull;&nbsp;
+                    Academic Project
+                  </p>
+                </div>
+              </div>
+
+              <!-- Experience 2: Literaku Indonesia -->
+              <div
+                class="relative rounded-2xl bg-[#0c1326]/90 border border-white/10 hover:border-blue-500/40 p-5 sm:p-6 transition shadow-xl"
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center font-mono text-xs font-bold text-slate-200"
+                      >2</span
+                    >
+                    <div
+                      class="w-7 h-7 rounded-full bg-purple-500/20 border border-purple-400/40 flex items-center justify-center text-purple-400 font-bold text-xs"
+                    >
+                      LI
+                    </div>
+                    <span class="text-sm font-medium text-slate-300"
+                      >Literaku Indonesia</span
+                    >
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full bg-white/[0.06] border border-white/10 text-[11px] font-mono text-slate-300 shrink-0"
+                  >
+                    Mar 2025 - Jul 2025
+                  </span>
+                </div>
+                <div class="mt-4 pl-10 space-y-1">
+                  <h4 class="font-display text-lg font-bold text-white">
+                    Program Officer &amp; Master of Ceremony (MC)
+                  </h4>
+                  <p class="text-xs text-slate-400">
+                    Literaku Indonesia Batch 8 &nbsp;&bull;&nbsp; Remote /
+                    Organization
+                  </p>
+                </div>
+              </div>
+
+              <!-- Experience 3: Politeknik SSR Bogor -->
+              <div
+                class="relative rounded-2xl bg-[#0c1326]/90 border border-white/10 hover:border-blue-500/40 p-5 sm:p-6 transition shadow-xl"
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center font-mono text-xs font-bold text-slate-200"
+                      >3</span
+                    >
+                    <div
+                      class="w-7 h-7 rounded-full bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 font-bold text-xs"
+                    >
+                      IT
+                    </div>
+                    <span class="text-sm font-medium text-slate-300"
+                      >Politeknik SSR (Sains Seni Rekakreasi)</span
+                    >
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full bg-white/[0.06] border border-white/10 text-[11px] font-mono text-slate-300 shrink-0"
+                  >
+                    Jul 2021 - Dec 2021
+                  </span>
+                </div>
+                <div class="mt-4 pl-10 space-y-1">
+                  <h4 class="font-display text-lg font-bold text-white">
+                    IT Support &amp; Network Technician
+                  </h4>
+                  <p class="text-xs text-slate-400">
+                    Bogor, Indonesia &nbsp;&bull;&nbsp; Technical Support &amp;
+                    LAN
+                  </p>
+                </div>
+              </div>
+
+              <!-- Experience 4: Klub Bola Voli Universitas -->
+              <div
+                class="relative rounded-2xl bg-[#0c1326]/90 border border-white/10 hover:border-blue-500/40 p-5 sm:p-6 transition shadow-xl"
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center font-mono text-xs font-bold text-slate-200"
+                      >4</span
+                    >
+                    <div
+                      class="w-7 h-7 rounded-full bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-400 font-bold text-xs"
+                    >
+                      VB
+                    </div>
+                    <span class="text-sm font-medium text-slate-300"
+                      >Klub Bola Voli Universitas</span
+                    >
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full bg-white/[0.06] border border-white/10 text-[11px] font-mono text-slate-300 shrink-0"
+                  >
+                    Nov 2024 - Sep 2025
+                  </span>
+                </div>
+                <div class="mt-4 pl-10 space-y-1">
+                  <h4 class="font-display text-lg font-bold text-white">
+                    Anggota Aktif
+                  </h4>
+                  <p class="text-xs text-slate-400">
+                    Universitas Indraprasta PGRI &nbsp;&bull;&nbsp; UKM Olahraga
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2C. 3 Interactive 3D Glass Folders (Projects, Certificates, Awards) (00:18 - 00:25) -->
+        <div
+          class="pt-12 pb-4 grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-8 max-w-5xl mx-auto"
+        >
+          <!-- Folder 1: Projects -->
+          <div
+            onclick="jumpToPortfolioTab('projects')"
+            class="folder-3d-wrap relative h-56 cursor-pointer mx-auto w-full max-w-[300px] select-none"
+          >
+            <!-- Folder Top Ear -->
+            <div
+              class="folder-tab-ear absolute top-3 left-0 w-28 h-7 rounded-t-2xl"
+            ></div>
+            <!-- Folder Back Plate -->
+            <div
+              class="folder-back absolute inset-x-0 bottom-0 top-8 rounded-b-3xl rounded-tr-3xl p-4"
+            >
+              <!-- 3 Fan-Out Preview Cards Inside Folder -->
+              <div
+                class="paper-left folder-paper absolute left-6 right-6 top-3 h-28 rounded-xl bg-gradient-to-br from-indigo-900 via-blue-900 to-slate-900 border border-white/20 p-2.5 flex flex-col justify-between overflow-hidden"
+              >
+                <span class="text-[9px] font-mono text-blue-300"
+                  >WEB SYSTEM</span
+                >
+                <div class="text-[11px] font-bold text-white leading-tight">
+                  SI Penjadwalan Kuliah
+                </div>
+                <div class="h-2 w-2/3 rounded bg-blue-400/40"></div>
+              </div>
+              <div
+                class="paper-center folder-paper absolute left-6 right-6 top-2 h-28 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 border border-white/25 p-2.5 flex flex-col justify-between overflow-hidden"
+              >
+                <span class="text-[9px] font-mono text-amber-200"
+                  >CRM PIPELINE</span
+                >
+                <div class="text-[11px] font-bold text-white leading-tight">
+                  HubSpot CRM &amp; Segmentasi
+                </div>
+                <div class="h-2 w-3/4 rounded bg-white/40"></div>
+              </div>
+              <div
+                class="paper-right folder-paper absolute left-6 right-6 top-3 h-28 rounded-xl bg-gradient-to-br from-emerald-700 via-teal-900 to-slate-900 border border-white/20 p-2.5 flex flex-col justify-between overflow-hidden"
+              >
+                <span class="text-[9px] font-mono text-emerald-200"
+                  >DATA ANALYST</span
+                >
+                <div class="text-[11px] font-bold text-white leading-tight">
+                  DQLab Excel Case Study
+                </div>
+                <div class="h-2 w-1/2 rounded bg-emerald-300/40"></div>
+              </div>
+            </div>
+            <!-- Folder Glass Front Flap -->
+            <div
+              class="folder-front-flap absolute inset-x-0 bottom-0 h-40 rounded-3xl p-6 flex items-end justify-between"
+            >
+              <div>
+                <div
+                  id="folder-count-projects"
+                  class="font-display text-3xl font-extrabold text-white"
+                >
+                  4
+                </div>
+                <div class="text-sm font-medium text-slate-300">Projects</div>
+              </div>
+              <div
+                class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-mono text-slate-200"
+              >
+                •••
+              </div>
+            </div>
+          </div>
+
+          <!-- Folder 2: Certificates -->
+          <div
+            onclick="jumpToPortfolioTab('certificates')"
+            class="folder-3d-wrap relative h-56 cursor-pointer mx-auto w-full max-w-[300px] select-none"
+          >
+            <div
+              class="folder-tab-ear absolute top-3 left-0 w-28 h-7 rounded-t-2xl"
+            ></div>
+            <div
+              class="folder-back absolute inset-x-0 bottom-0 top-8 rounded-b-3xl rounded-tr-3xl p-4"
+            >
+              <!-- 3 Fan-Out Certificate Cards -->
+              <div
+                class="paper-left folder-paper absolute left-6 right-6 top-3 h-28 rounded-xl bg-white text-slate-900 border border-slate-300 p-2.5 flex flex-col justify-between"
+              >
+                <div
+                  class="text-[8px] font-mono font-bold text-blue-700 uppercase"
+                >
+                  DQLab Bootcamp
+                </div>
+                <div
+                  class="text-[10px] font-extrabold text-slate-800 leading-tight"
+                >
+                  CERTIFICATE OF COMPLETION
+                </div>
+                <div class="text-[9px] text-slate-500">
+                  Data Analyst with Excel
+                </div>
+              </div>
+              <div
+                class="paper-center folder-paper absolute left-6 right-6 top-2 h-28 rounded-xl bg-gradient-to-br from-sky-50 to-indigo-100 text-slate-900 border border-blue-300 p-2.5 flex flex-col justify-between"
+              >
+                <div
+                  class="text-[8px] font-mono font-bold text-indigo-700 uppercase"
+                >
+                  Literaku Indonesia
+                </div>
+                <div
+                  class="text-[10px] font-extrabold text-slate-900 leading-tight"
+                >
+                  CERTIFICATE BATCH 8
+                </div>
+                <div class="text-[9px] text-slate-600">
+                  Program Officer &amp; MC
+                </div>
+              </div>
+              <div
+                class="paper-right folder-paper absolute left-6 right-6 top-3 h-28 rounded-xl bg-gradient-to-br from-amber-50 to-orange-100 text-slate-900 border border-amber-300 p-2.5 flex flex-col justify-between"
+              >
+                <div
+                  class="text-[8px] font-mono font-bold text-amber-800 uppercase"
+                >
+                  CRM Competence
+                </div>
+                <div
+                  class="text-[10px] font-extrabold text-slate-900 leading-tight"
+                >
+                  HUBSPOT CRM SKILL
+                </div>
+                <div class="text-[9px] text-slate-600">
+                  Dimas Maycardo Sihotang
+                </div>
+              </div>
+            </div>
+            <div
+              class="folder-front-flap absolute inset-x-0 bottom-0 h-40 rounded-3xl p-6 flex items-end justify-between"
+            >
+              <div>
+                <div
+                  id="folder-count-certificates"
+                  class="font-display text-3xl font-extrabold text-white"
+                >
+                  4
+                </div>
+                <div class="text-sm font-medium text-slate-300">
+                  Certificates
+                </div>
+              </div>
+              <div
+                class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-mono text-slate-200"
+              >
+                •••
+              </div>
+            </div>
+          </div>
+
+          <!-- Folder 3: Awards -->
+          <div
+            onclick="jumpToPortfolioTab('awards')"
+            class="folder-3d-wrap relative h-56 cursor-pointer mx-auto w-full max-w-[300px] select-none"
+          >
+            <div
+              class="folder-tab-ear absolute top-3 left-0 w-28 h-7 rounded-t-2xl"
+            ></div>
+            <div
+              class="folder-back absolute inset-x-0 bottom-0 top-8 rounded-b-3xl rounded-tr-3xl p-4"
+            >
+              <!-- 3 Fan-Out Award Cards -->
+              <div
+                class="paper-left folder-paper absolute left-6 right-6 top-3 h-28 rounded-xl bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 border border-amber-400/50 p-2.5 flex flex-col justify-between"
+              >
+                <div class="text-[8px] font-mono text-amber-300 uppercase">
+                  Codepolitan • 2026
+                </div>
+                <div class="text-[10px] font-bold text-white leading-tight">
+                  Predikat "Great Work" Generatif AI
+                </div>
+                <div class="text-[8px] text-amber-200">
+                  AI Opportunity Fund APAC
+                </div>
+              </div>
+              <div
+                class="paper-center folder-paper absolute left-6 right-6 top-2 h-28 rounded-xl bg-gradient-to-br from-amber-100 via-yellow-50 to-amber-200 text-slate-900 border border-amber-400 p-2.5 flex flex-col justify-between"
+              >
+                <div
+                  class="text-[8px] font-mono font-bold text-amber-900 uppercase"
+                >
+                  CERTIFICATE OF ACHIEVEMENT
+                </div>
+                <div
+                  class="text-[10px] font-extrabold text-slate-900 leading-tight"
+                >
+                  Dimas Maycardo Sihotang
+                </div>
+                <div class="text-[8px] text-amber-800">
+                  Public Speaking &amp; MC Award
+                </div>
+              </div>
+              <div
+                class="paper-right folder-paper absolute left-6 right-6 top-3 h-28 rounded-xl bg-gradient-to-br from-indigo-950 to-slate-900 border border-indigo-400/40 p-2.5 flex flex-col justify-between"
+              >
+                <div
+                  class="text-[8px] font-mono text-indigo-300 uppercase"
+                ></div>
+                <div class="text-[10px] font-bold text-white leading-tight">
+                  Siap Diisi Penghargaan Anda
+                </div>
+                <div class="text-[8px] text-slate-400"></div>
+              </div>
+            </div>
+            <div
+              class="folder-front-flap absolute inset-x-0 bottom-0 h-40 rounded-3xl p-6 flex items-end justify-between"
+            >
+              <div>
+                <div
+                  id="folder-count-awards"
+                  class="font-display text-3xl font-extrabold text-white"
+                >
+                  3
+                </div>
+                <div class="text-sm font-medium text-slate-300">Awards</div>
+              </div>
+              <div
+                class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-mono text-slate-200"
+              >
+                •••
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2D. GIANT FULL-WIDTH "PORTOFOLIO" TRANSITION BANNER (00:19 - 00:26) -->
+      <div class="w-full overflow-hidden pt-14 select-none pointer-events-none">
+        <div
+          class="giant-portofolio-title font-display font-black text-white text-center tracking-tighter uppercase whitespace-nowrap"
+        >
+          PORTOFOLIO
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. LIGHT TOPOGRAPHIC PORTFOLIO & FLOATING GALLERY SECTION (00:26 - 00:47) ==================== -->
+    <section
+      id="portfolio"
+      class="relative bg-topo-light text-slate-900 pt-20 pb-24 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <!-- Section Heading & 3-Tab Switcher (Projects | Certificates | Awards) -->
+        <div class="flex flex-col items-center space-y-7">
+          <h2
+            class="font-display text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight"
+          >
+            Portfolio
+          </h2>
+
+          <!-- Segmented Tab Box Matching Video 00:27 -->
+          <div
+            class="inline-flex flex-wrap items-center justify-center gap-2 p-2 rounded-2xl bg-white shadow-[0_10px_35px_rgba(15,23,42,0.08)] border border-slate-200/80"
+          >
+            <button
+              id="p-tab-projects"
+              onclick="switchPortfolioCategory('projects')"
+              class="px-8 sm:px-11 py-3 rounded-xl flex flex-col items-center gap-1 text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-royalBlue text-white shadow-md shadow-blue-600/25"
+            >
+              <span class="font-mono text-xs">&lt; &gt;</span>
+              <span>Projects</span>
+            </button>
+
+            <button
+              id="p-tab-certificates"
+              onclick="switchPortfolioCategory('certificates')"
+              class="px-8 sm:px-11 py-3 rounded-xl flex flex-col items-center gap-1 text-xs sm:text-sm font-semibold transition-all cursor-pointer text-slate-700 hover:bg-slate-100"
+            >
+              <i data-lucide="award" class="w-4 h-4"></i>
+              <span>Certificates</span>
+            </button>
+
+            <button
+              id="p-tab-awards"
+              onclick="switchPortfolioCategory('awards')"
+              class="px-8 sm:px-11 py-3 rounded-xl flex flex-col items-center gap-1 text-xs sm:text-sm font-semibold transition-all cursor-pointer text-slate-700 hover:bg-slate-100"
+            >
+              <i data-lucide="trophy" class="w-4 h-4"></i>
+              <span>Awards</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Horizontal Carousel Wrapper with Left (<) and Right (>) Blue Circular Buttons (00:27 - 00:44) -->
+        <div class="relative">
+          <!-- Left Arrow Button -->
+          <button
+            onclick="scrollCarousel(-1)"
+            aria-label="Geser Kiri"
+            class="absolute -left-2 sm:-left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-royalBlue hover:bg-royalBlueHover text-white shadow-xl shadow-blue-600/30 flex items-center justify-center transition transform hover:scale-105 cursor-pointer"
+          >
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Carousel Track -->
+          <div
+            id="portfolio-carousel"
+            class="flex items-stretch gap-6 overflow-x-auto no-scrollbar scroll-smooth px-4 py-4"
+          >
+            <!-- Populated dynamically via JS for Projects / Certificates / Awards -->
+          </div>
+
+          <!-- Right Arrow Button -->
+          <button
+            onclick="scrollCarousel(1)"
+            aria-label="Geser Kanan"
+            class="absolute -right-2 sm:-right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-royalBlue hover:bg-royalBlueHover text-white shadow-xl shadow-blue-600/30 flex items-center justify-center transition transform hover:scale-105 cursor-pointer"
+          >
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. CONTACT & SOCIAL LINKS ==================== -->
+    <section
+      id="contact"
+      class="relative bg-[#050a18] text-white py-20 overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 pointer-events-none opacity-40"
+        style="
+          background: radial-gradient(
+            circle at 50% 0%,
+            rgba(37, 99, 235, 0.22),
+            transparent 55%
+          );
+        "
+      ></div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p
+          class="font-mono text-xs uppercase tracking-[0.25em] text-cyan-300 mb-3"
+        >
+          LET'S CONNECT
+        </p>
+        <h2
+          class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight"
+        >
+          Hubungi Saya
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+          Silakan terhubung melalui platform berikut untuk berdiskusi,
+          berkolaborasi, atau mengenal lebih lanjut.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-9">
+          <a
+            href="https://www.linkedin.com/in/dimas-maycardo-sihotang-213505245"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="w-14 h-14 rounded-2xl bg-white/[0.05] hover:bg-blue-500/20 border border-white/10 hover:border-blue-400/50 flex items-center justify-center text-slate-300 hover:text-blue-300 transition transform hover:-translate-y-1"
+          >
+            <i data-lucide="linkedin" class="w-6 h-6"></i>
+          </a>
+          <a
+            href="https://github.com/Dimas-May"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="w-14 h-14 rounded-2xl bg-white/[0.05] hover:bg-indigo-500/20 border border-white/10 hover:border-indigo-400/50 flex items-center justify-center text-slate-300 hover:text-white transition transform hover:-translate-y-1"
+          >
+            <i data-lucide="github" class="w-6 h-6"></i>
+          </a>
+          <a
+            href="mailto:dimasmaycardo.sihotang@gmail.com"
+            aria-label="Gmail"
+            class="w-14 h-14 rounded-2xl bg-white/[0.05] hover:bg-purple-500/20 border border-white/10 hover:border-purple-400/50 flex items-center justify-center text-slate-300 hover:text-purple-300 transition transform hover:-translate-y-1"
+          >
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </a>
+          <a
+            href="https://wa.me/6281222712957"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            class="w-14 h-14 rounded-2xl bg-white/[0.05] hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-400/50 flex items-center justify-center text-slate-300 hover:text-emerald-300 transition transform hover:-translate-y-1"
+          >
+            <i data-lucide="phone" class="w-6 h-6"></i>
+          </a>
+        </div>
+        <p class="text-xs text-slate-500 mt-7">
+          © 2026 Dimas Maycardo Sihotang. All rights reserved.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== MODAL 1: DETAIL PROYEK / SERTIFIKAT / AWARD ==================== -->
+    <div
+      id="detail-modal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md"
+    >
+      <div
+        class="bg-white text-slate-900 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto"
+      >
+        <div
+          class="flex items-start justify-between gap-4 border-b border-slate-100 pb-4"
+        >
+          <div>
+            <span
+              id="modal-badge"
+              class="px-2.5 py-1 rounded-full bg-blue-50 text-royalBlue font-mono text-xs font-semibold"
+              >DETAIL</span
+            >
+            <h3
+              id="modal-title"
+              class="font-display text-2xl font-extrabold text-slate-900 mt-1"
+            >
+              Judul Item
+            </h3>
+          </div>
+          <button
+            onclick="closeDetailModal()"
+            class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 cursor-pointer"
+          >
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div
+          id="modal-preview-box"
+          class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 max-h-72 flex items-center justify-center"
+        >
+          <!-- Dynamic preview -->
+        </div>
+
+        <p id="modal-desc" class="text-slate-600 text-sm leading-relaxed"></p>
+
+        <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+
+        <div
+          class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3"
+        >
+          <button
+            onclick="closeDetailModal()"
+            class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs cursor-pointer"
+          >
+            Tutup
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TOAST NOTIFICATION ==================== -->
+    <div
+      id="toast"
+      class="fixed top-20 right-6 z-50 hidden items-center gap-2.5 px-5 py-3 rounded-2xl bg-slate-900 text-white text-xs sm:text-sm font-medium shadow-2xl border border-white/15"
+    >
+      <i
+        data-lucide="check-circle-2"
+        class="w-4 h-4 text-emerald-400 shrink-0"
+      ></i>
+      <span id="toast-msg">Berhasil!</span>
+    </div>
+
+    <!-- ==================== MAIN JAVASCRIPT ==================== -->
+    <script>
+      lucide.createIcons();
+
+      /* -------------------------------------------------------------------------
+       1. PORTFOLIO CONFIGURATION & LOCAL ASSET PATHS
+       -------------------------------------------------------------------------
+       Foto profil ditambahkan manual ke assets/profile.jpg.
+       CV_URL mengarah ke tautan Google Drive untuk review CV.
+    ------------------------------------------------------------------------- */
+      const CV_URL =
+        "https://drive.google.com/file/d/1V9JsY-3ZZMsb7j5vom19PfN9dQ9HZ5U9/view?usp=drive_link";
+
+      const ASSETS = {
+        profile: "assets/profile.jpg",
+        spiderman: "assets/spiderman.png",
+      };
+
+      function setImageSource(imgId, fallbackId, src, fitClass = "") {
+        const img = document.getElementById(imgId);
+        const fallback = document.getElementById(fallbackId);
+        if (!img || !fallback) return;
+
+        if (!src) {
+          img.classList.add("hidden");
+          fallback.classList.remove("hidden");
+          return;
+        }
+
+        img.src = src;
+        img.onload = () => {
+          img.classList.remove("hidden");
+          fallback.classList.add("hidden");
+        };
+        img.onerror = () => {
+          img.classList.add("hidden");
+          fallback.classList.remove("hidden");
+        };
+        if (fitClass) img.className = fitClass;
+      }
+
+      function applyLocalAssets() {
+        setImageSource(
+          "main-profile-img",
+          "main-profile-fallback",
+          ASSETS.profile,
+        );
+        setImageSource(
+          "spidey-base-img",
+          "spidey-base-fallback",
+          ASSETS.profile,
+        );
+        setImageSource(
+          "spidey-custom-img",
+          "spidey-svg-fallback",
+          ASSETS.spiderman,
+        );
+
+        document.querySelectorAll("[data-cv-link]").forEach((link) => {
+          link.href = CV_URL;
+        });
+        const heroCv = document.getElementById("cv-link-hero");
+        const aboutCv = document.getElementById("cv-link-about");
+        if (heroCv) heroCv.href = CV_URL;
+        if (aboutCv) aboutCv.href = CV_URL;
+      }
+
+      /* -------------------------------------------------------------------------
+       2. FLOATING NAVBAR & CUTE GHOST MASCOT POSITIONING + PARALLAX HERO
+    ------------------------------------------------------------------------- */
+      const ghostMascot = document.getElementById("ghost-mascot");
+      const navContainer = document.getElementById("nav-container");
+      let currentSection = "home";
+
+      function updateGhostPosition(sectionId) {
+        const targetBtn = document.querySelector(
+          `.nav-pill-btn[data-nav="${sectionId}"]`,
+        );
+        if (!targetBtn || !ghostMascot) return;
+        const navRect = navContainer.getBoundingClientRect();
+        const btnRect = targetBtn.getBoundingClientRect();
+        const offsetLeft = btnRect.left - navRect.left + btnRect.width / 2 - 18;
+        ghostMascot.style.transform = `translateX(${offsetLeft}px)`;
+      }
+
+      function setActiveNav(sectionId) {
+        currentSection = sectionId;
+        const isLightSection = sectionId === "portfolio";
+
+        navContainer.className = `relative pointer-events-auto ${isLightSection ? "nav-pill-light" : "nav-pill-dark"} rounded-full p-1.5 flex items-center gap-1 transition-colors duration-300`;
+
+        document.querySelectorAll(".nav-pill-btn").forEach((btn) => {
+          const nav = btn.getAttribute("data-nav");
+          if (nav === sectionId) {
+            btn.className =
+              "nav-pill-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-royalBlue text-white shadow-md";
+          } else {
+            btn.className = isLightSection
+              ? "nav-pill-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 text-slate-700 hover:text-slate-950"
+              : "nav-pill-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 text-slate-300 hover:text-white";
+          }
+        });
+
+        updateGhostPosition(sectionId);
+      }
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+
+        // Subtle Parallax on Hero Title
+        if (scrollY < window.innerHeight * 1.1) {
+          const titleEl = document.getElementById("parallax-title");
+          if (titleEl) {
+            titleEl.style.transform = `translateY(${scrollY * 0.12}px)`;
+          }
+        }
+
+        // Give Lanyard a subtle swing impulse when scrolling near About section
+        if (typeof window.applyScrollLanyardImpulse === "function") {
+          window.applyScrollLanyardImpulse(scrollY);
+        }
+
+        // Scroll-spy for Navbar & Ghost Mascot
+        const sections = ["home", "about", "portfolio"];
+        const probe = scrollY + window.innerHeight * 0.35;
+        let detected = "home";
+        sections.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && probe >= el.offsetTop) detected = id;
+        });
+        if (detected !== currentSection) {
+          setActiveNav(detected);
+        }
+      });
+
+      window.addEventListener("resize", () =>
+        updateGhostPosition(currentSection),
+      );
+
+      /* -------------------------------------------------------------------------
+       3. EKA WAHYU SPLASH SCREEN, TYPEWRITER, 3D DATA CARD & SPIDER-MAN HOVER
+    ------------------------------------------------------------------------- */
+      function dismissSplash() {
+        const splash = document.getElementById("eka-splash");
+        if (!splash || splash.dataset.dismissed === "true") return;
+        splash.dataset.dismissed = "true";
+        splash.classList.add("opacity-0", "pointer-events-none");
+        setTimeout(() => {
+          splash.style.display = "none";
+        }, 650);
+      }
+
+      // Simulated loading progress: the portfolio opens automatically at 100%.
+      (function runSplashProgress() {
+        const bar = document.getElementById("loading-progress");
+        const label = document.getElementById("loading-percentage");
+        let progress = 0;
+        const tick = () => {
+          progress = Math.min(
+            100,
+            progress + Math.floor(Math.random() * 5) + 2,
+          );
+          if (bar) bar.style.width = `${progress}%`;
+          if (label) label.textContent = `${progress}%`;
+          if (progress >= 100) {
+            setTimeout(dismissSplash, 250);
+          } else {
+            setTimeout(tick, 55 + Math.random() * 55);
+          }
+        };
+        setTimeout(tick, 250);
+      })();
+
+      // Dynamic Typewriter Roles in Hero
+      const typewriterRoles = [
+        "Data Analyst Enthusiast (Excel & SQL)",
+        "CRM & Customer Support (HubSpot)",
+        "Front-End Web Developer (HTML/JS/PHP)",
+        "Program Officer & Master of Ceremony (MC)",
+      ];
+      let roleIdx = 0;
+      let charIdx = 0;
+      let deletingRole = false;
+
+      function runTypewriter() {
+        const el = document.getElementById("eka-typewriter");
+        if (!el) return;
+        const word = typewriterRoles[roleIdx];
+        if (!deletingRole) {
+          charIdx++;
+          el.textContent = word.substring(0, charIdx);
+          if (charIdx >= word.length) {
+            deletingRole = true;
+            setTimeout(runTypewriter, 1800);
+            return;
+          }
+          setTimeout(runTypewriter, 55);
+        } else {
+          charIdx--;
+          el.textContent = word.substring(0, charIdx);
+          if (charIdx <= 0) {
+            deletingRole = false;
+            roleIdx = (roleIdx + 1) % typewriterRoles.length;
+            setTimeout(runTypewriter, 260);
+            return;
+          }
+          setTimeout(runTypewriter, 28);
+        }
+      }
+
+      // 3D Tilt Effect on Data Analytics Hero Card
+      function initDataCardTilt() {
+        const card = document.getElementById("data-hero-card");
+        if (!card) return;
+        card.addEventListener("mousemove", (e) => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = `perspective(1000px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`;
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.transform =
+            "perspective(1000px) rotateY(0deg) rotateX(0deg)";
+        });
+      }
+
+      // Spider-Man Cursor Reveal Stage Controls
+      function initSpidermanStage() {
+        const stage = document.getElementById("spiderman-portrait-stage");
+        if (!stage) return;
+
+        function updateCursorSpot(clientX, clientY) {
+          const rect = stage.getBoundingClientRect();
+          const x = ((clientX - rect.left) / rect.width) * 100;
+          const y = ((clientY - rect.top) / rect.height) * 100;
+          stage.style.setProperty("--spidey-x", `${x}%`);
+          stage.style.setProperty("--spidey-y", `${y}%`);
+          stage.style.setProperty("--spidey-r", "128px");
+        }
+
+        stage.addEventListener("mousemove", (e) =>
+          updateCursorSpot(e.clientX, e.clientY),
+        );
+        stage.addEventListener("mouseleave", () => {
+          if (!stage.classList.contains("spidey-locked")) {
+            stage.style.setProperty("--spidey-r", "0px");
+          }
+        });
+
+        stage.addEventListener(
+          "touchmove",
+          (e) => {
+            if (e.touches.length === 1) {
+              updateCursorSpot(e.touches[0].clientX, e.touches[0].clientY);
+            }
+          },
+          { passive: true },
+        );
+      }
+
+      function toggleSpideyRevealMode() {
+        const stage = document.getElementById("spiderman-portrait-stage");
+        const label = document.getElementById("spidey-mode-label");
+        if (!stage || !label) return;
+        stage.classList.toggle("spidey-full-mode");
+        const isFull = stage.classList.contains("spidey-full-mode");
+        label.textContent = isFull
+          ? "Full Hover Spider-Man"
+          : "Lens Kursor Spider-Man";
+        showToast(
+          isFull
+            ? "Mode Full Hover Spider-Man aktif!"
+            : "Mode Lens Kursor Spider-Man aktif!",
+        );
+      }
+
+      function toggleSpideyLock() {
+        const stage = document.getElementById("spiderman-portrait-stage");
+        const label = document.getElementById("spidey-lock-label");
+        if (!stage || !label) return;
+        stage.classList.toggle("spidey-locked");
+        const locked = stage.classList.contains("spidey-locked");
+        label.textContent = locked
+          ? "Tahan Mode Spider-Man: ON"
+          : "Tahan Mode Spider-Man: OFF";
+      }
+
+      function flipLanyardCard() {
+        const inner = document.getElementById("lanyard-card-inner");
+        if (inner) inner.classList.toggle("is-flipped");
+        nudgeLanyard(14);
+      }
+
+      let lanyardImpulseFn = null;
+      function nudgeLanyard(strength = 26) {
+        if (lanyardImpulseFn) lanyardImpulseFn(strength);
+      }
+
+      function initPhysicsLanyard() {
+        const stage = document.getElementById("lanyard-stage");
+        const canvas = document.getElementById("lanyard-canvas");
+        const cardWrap = document.getElementById("lanyard-card-wrapper");
+        if (!stage || !canvas || !cardWrap) return;
+
+        const ctx = canvas.getContext("2d");
+        let width = stage.clientWidth;
+        let height = stage.clientHeight;
+
+        function resizeCanvas() {
+          const dpr = window.devicePixelRatio || 1;
+          width = stage.clientWidth;
+          height = stage.clientHeight;
+          canvas.width = width * dpr;
+          canvas.height = height * dpr;
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+        resizeCanvas();
+
+        // Multi-Node Verlet Rope Simulation (8 nodes from ceiling anchor to card clip)
+        const numNodes = 8;
+        const segLength = 17;
+        const nodes = [];
+        const anchorX = () => width / 2;
+        const anchorY = 12;
+
+        for (let i = 0; i < numNodes; i++) {
+          nodes.push({
+            x: anchorX() + i * 4,
+            y: anchorY + i * segLength,
+            oldX: anchorX(),
+            oldY: anchorY + i * segLength,
+          });
+        }
+
+        let isDragging = false;
+        let dragOffsetX = 0;
+        let dragOffsetY = 0;
+        let pointerX = anchorX();
+        let pointerY = anchorY + numNodes * segLength;
+        let cardAngle = 0;
+        let cardAngularVel = 0;
+        let lastScrollY = window.scrollY;
+
+        lanyardImpulseFn = (force = 24) => {
+          const dir = Math.random() > 0.5 ? 1 : -1;
+          const bottom = nodes[numNodes - 1];
+          bottom.oldX -= dir * force;
+          cardAngularVel += dir * 0.045;
+        };
+
+        window.applyScrollLanyardImpulse = (newScrollY) => {
+          const dy = newScrollY - lastScrollY;
+          lastScrollY = newScrollY;
+          if (Math.abs(dy) > 2 && !isDragging) {
+            const bottom = nodes[numNodes - 1];
+            bottom.oldX -=
+              Math.sin(newScrollY * 0.02) * Math.min(8, Math.abs(dy) * 0.12);
+            bottom.oldY += Math.max(-6, Math.min(6, dy * 0.08));
+          }
+        };
+
+        function startDrag(clientX, clientY) {
+          const rect = stage.getBoundingClientRect();
+          const bottom = nodes[numNodes - 1];
+          pointerX = clientX - rect.left;
+          pointerY = clientY - rect.top;
+          dragOffsetX = pointerX - bottom.x;
+          dragOffsetY = pointerY - bottom.y;
+          isDragging = true;
+        }
+
+        function moveDrag(clientX, clientY) {
+          const rect = stage.getBoundingClientRect();
+          const lx = clientX - rect.left;
+          const ly = clientY - rect.top;
+          stage.style.setProperty("--spot-x", `${(lx / width) * 100}%`);
+          stage.style.setProperty("--spot-y", `${(ly / height) * 100}%`);
+
+          if (!isDragging) return;
+          pointerX = lx - dragOffsetX;
+          pointerY = ly - dragOffsetY;
+        }
+
+        function endDrag() {
+          isDragging = false;
+        }
+
+        cardWrap.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+          startDrag(e.clientX, e.clientY);
+        });
+        window.addEventListener("mousemove", (e) =>
+          moveDrag(e.clientX, e.clientY),
+        );
+        window.addEventListener("mouseup", endDrag);
+
+        cardWrap.addEventListener(
+          "touchstart",
+          (e) => {
+            if (e.touches.length === 1) {
+              startDrag(e.touches[0].clientX, e.touches[0].clientY);
+            }
+          },
+          { passive: true },
+        );
+        window.addEventListener(
+          "touchmove",
+          (e) => {
+            if (e.touches.length === 1) {
+              moveDrag(e.touches[0].clientX, e.touches[0].clientY);
+            }
+          },
+          { passive: true },
+        );
+        window.addEventListener("touchend", endDrag);
+
+        window.addEventListener("resize", resizeCanvas);
+
+        function stepPhysics() {
+          const gravity = 0.55;
+          const damping = 0.982;
+
+          for (let i = 1; i < numNodes; i++) {
+            const n = nodes[i];
+            const vx = (n.x - n.oldX) * damping;
+            const vy = (n.y - n.oldY) * damping;
+            n.oldX = n.x;
+            n.oldY = n.y;
+            n.x += vx;
+            n.y += vy + gravity;
+          }
+
+          const bottom = nodes[numNodes - 1];
+          if (isDragging) {
+            const maxRadius = numNodes * segLength * 1.45;
+            let dx = pointerX - anchorX();
+            let dy = pointerY - anchorY;
+            const dist = Math.hypot(dx, dy);
+            if (dist > maxRadius) {
+              dx = (dx / dist) * maxRadius;
+              dy = (dy / dist) * maxRadius;
+            }
+            bottom.x = anchorX() + dx;
+            bottom.y = Math.max(36, anchorY + dy);
+          }
+
+          const iterations = 14;
+          for (let iter = 0; iter < iterations; iter++) {
+            nodes[0].x = anchorX();
+            nodes[0].y = anchorY;
+
+            for (let i = 0; i < numNodes - 1; i++) {
+              const n1 = nodes[i];
+              const n2 = nodes[i + 1];
+              const dx = n2.x - n1.x;
+              const dy = n2.y - n1.y;
+              const dist = Math.hypot(dx, dy) || 0.0001;
+              const diff = (dist - segLength) / dist;
+
+              if (i === 0) {
+                n2.x -= dx * diff;
+                n2.y -= dy * diff;
+              } else if (isDragging && i + 1 === numNodes - 1) {
+                n1.x += dx * diff;
+                n1.y += dy * diff;
+              } else {
+                n1.x += dx * diff * 0.5;
+                n1.y += dy * diff * 0.5;
+                n2.x -= dx * diff * 0.5;
+                n2.y -= dy * diff * 0.5;
+              }
+            }
+          }
+
+          ctx.clearRect(0, 0, width, height);
+
+          const spreadTop = 24;
+          ctx.lineCap = "round";
+          ctx.lineJoin = "round";
+
+          ctx.beginPath();
+          ctx.moveTo(anchorX() - spreadTop, anchorY);
+          for (let i = 1; i < numNodes; i++) {
+            const ratio = 1 - i / (numNodes - 1);
+            ctx.lineTo(nodes[i].x - spreadTop * ratio + 3, nodes[i].y + 4);
+          }
+          ctx.strokeStyle = "rgba(0, 0, 0, 0.45)";
+          ctx.lineWidth = 12;
+          ctx.stroke();
+
+          const strapGrad = ctx.createLinearGradient(0, anchorY, 0, bottom.y);
+          strapGrad.addColorStop(0, "#1e3a8a");
+          strapGrad.addColorStop(0.5, "#2563eb");
+          strapGrad.addColorStop(1, "#1d4ed8");
+
+          ctx.beginPath();
+          ctx.moveTo(anchorX() - spreadTop, anchorY);
+          for (let i = 1; i < numNodes; i++) {
+            const ratio = 1 - i / (numNodes - 1);
+            ctx.lineTo(nodes[i].x - spreadTop * ratio, nodes[i].y);
+          }
+          ctx.strokeStyle = strapGrad;
+          ctx.lineWidth = 10;
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.moveTo(anchorX() + spreadTop, anchorY);
+          for (let i = 1; i < numNodes; i++) {
+            const ratio = 1 - i / (numNodes - 1);
+            ctx.lineTo(nodes[i].x + spreadTop * ratio, nodes[i].y);
+          }
+          ctx.strokeStyle = "#1e40af";
+          ctx.lineWidth = 10;
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.moveTo(anchorX() - spreadTop, anchorY);
+          for (let i = 1; i < numNodes; i++) {
+            const ratio = 1 - i / (numNodes - 1);
+            ctx.lineTo(nodes[i].x - spreadTop * ratio, nodes[i].y);
+          }
+          ctx.strokeStyle = "rgba(147, 197, 253, 0.45)";
+          ctx.lineWidth = 1.5;
+          ctx.setLineDash([4, 4]);
+          ctx.stroke();
+          ctx.setLineDash([]);
+
+          const prev = nodes[numNodes - 2];
+          const ropeAngle = Math.atan2(bottom.x - prev.x, bottom.y - prev.y);
+
+          ctx.save();
+          ctx.translate(bottom.x, bottom.y);
+          ctx.rotate(-ropeAngle * 0.65);
+          ctx.fillStyle = "#94a3b8";
+          ctx.strokeStyle = "#e2e8f0";
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.roundRect(-8, -4, 16, 9, 4);
+          ctx.fill();
+          ctx.stroke();
+          ctx.fillStyle = "#cbd5e1";
+          ctx.fillRect(-3.5, 5, 7, 9);
+          ctx.restore();
+
+          const targetAngle =
+            -ropeAngle * 0.55 - (bottom.x - bottom.oldX) * 0.035;
+          const angleForce = (targetAngle - cardAngle) * 0.14;
+          cardAngularVel = (cardAngularVel + angleForce) * 0.86;
+          cardAngle += cardAngularVel;
+
+          const cardW = 228;
+          const cardX = bottom.x - cardW / 2;
+          const cardY = bottom.y + 7;
+          const tiltY = Math.max(
+            -18,
+            Math.min(18, (bottom.x - anchorX()) * 0.12),
+          );
+
+          cardWrap.style.transform = `translate3d(${cardX}px, ${cardY}px, 0) rotateZ(${cardAngle}rad) rotateY(${tiltY}deg)`;
+
+          requestAnimationFrame(stepPhysics);
+        }
+
+        requestAnimationFrame(stepPhysics);
+      }
+
+      /* -------------------------------------------------------------------------
+       4. PORTFOLIO DATA
+       -------------------------------------------------------------------------
+       Taruh gambar di folder assets/projects, assets/certificates, dan
+       assets/awards. Isi properti image dengan path relatif dari index.html.
+       Contoh: image: 'assets/projects/russ-coffe.jpg'
+    ------------------------------------------------------------------------- */
+      const portfolioData = {
+        projects: [
+          {
+            title: "R Coffe (Russ Coffe) Website",
+            sub: "Coffee Shop Landing Page & Booking • Web Project",
+            desc: "Website profil dan reservasi tempat untuk kedai kopi Russ Coffe di Bekasi dengan fitur navigasi Beranda, Galeri suasana kafe, serta halaman Booking secara online.",
+            tags: ["HTML", "CSS", "JavaScript", "Responsive UI"],
+            accent: "from-amber-900 via-teal-950 to-slate-900",
+            image: "assets/projects/russ-coffe.jpg",
+          },
+          {
+            title: "HubSpot CRM & Retensi",
+            sub: "CRM Implementation & Segmentation (2025)",
+            desc: "Implementasi analitis HubSpot CRM untuk pengelolaan database pelanggan, segmentasi kontak, otomatisasi pipeline pemasaran, serta peningkatan retensi pelanggan.",
+            tags: ["HubSpot CRM", "Customer Support", "Data Segmentation"],
+            accent: "from-blue-700 via-indigo-800 to-slate-900",
+            image: "assets/projects/hubspot-crm.png",
+          },
+          {
+            title: "Data Analyst Case Study",
+            sub: "DQLab Bootcamp Project (2025)",
+            desc: "Studi kasus pengolahan data bisnis, pembersihan data (data cleaning), serta pembuatan dashboard rekapitulasi performa menggunakan Microsoft Excel & Google Workspace.",
+            tags: ["Microsoft Excel", "Data Analysis", "Google Workspace"],
+            accent: "from-emerald-700 via-teal-800 to-slate-900",
+            image: "assets/projects/data-analyst-case-study.png",
+          },
+        ],
+        certificates: [
+          {
+            title: "Study Case Bootcamp Data Analyst with Excel",
+            sub: "DQLab • 2025",
+            desc: "Sertifikat penyelesaian studi kasus intensif pengolahan dan analisis data menggunakan Microsoft Excel (DQLab Bootcamp 2025).",
+            tags: ["DQLab", "Data Analyst", "Microsoft Excel"],
+            issuerColor:
+              "border-blue-400 bg-gradient-to-br from-sky-50 to-indigo-100",
+            image: "assets/certificates/dqlab-data-analyst.jpg",
+          },
+          {
+            title: "Program Officer & Master of Ceremony (MC)",
+            sub: "Literaku Indonesia - Batch 8 • 2025",
+            desc: "Sertifikat dedikasi sebagai Program Officer dan Master of Ceremony (MC) pada program edukasi perdamaian & literasi pemuda nasional.",
+            tags: ["Literaku Indonesia", "Public Speaking", "Program Officer"],
+            issuerColor:
+              "border-amber-400 bg-gradient-to-br from-amber-50 to-orange-100",
+            image: "assets/certificates/literaku-program-officer.jpg",
+          },
+          {
+            title: "Program Manager — Alldayspace Volunteer Program (AVP)",
+            sub: "Alldayspace Indonesia • Jun – Agu 2026",
+            desc: "Certificate of Appreciation atas keberhasilan menyelesaikan Alldayspace Volunteer Program (AVP) sebagai Program Manager pada periode Juni – Agustus 2026.",
+            tags: [
+              "Program Management",
+              "Leadership",
+              "Volunteer",
+              "Event Operations",
+            ],
+            issuerColor:
+              "border-blue-400 bg-gradient-to-br from-blue-50 to-indigo-100",
+            image: "assets/certificates/alldayspace-avp.png",
+          },
+        ],
+        awards: [
+          {
+            title: 'Predikat "Great Work" — Dasar & Penggunaan Generatif AI',
+            sub: "Codepolitan (AI Opportunity Fund: Asia Pacific) • 2026",
+            desc: 'Lulus dengan predikat kehormatan "Great Work" pada program Dasar dan Penggunaan Generatif AI yang didukung oleh AI Opportunity Fund: Asia Pacific.',
+            tags: ["Great Work Predicate", "Codepolitan", "Generative AI 2026"],
+            image: "assets/awards/codepolitan-great-work.jpg",
+          },
+        ],
+      };
+
+      let activePortfolioTab = "projects";
+
+      function updateFolderCounts() {
+        document.getElementById("folder-count-projects").textContent =
+          portfolioData.projects.length;
+        document.getElementById("folder-count-certificates").textContent =
+          portfolioData.certificates.length;
+        document.getElementById("folder-count-awards").textContent =
+          portfolioData.awards.length;
+      }
+
+      function renderCarousel() {
+        updateFolderCounts();
+        const track = document.getElementById("portfolio-carousel");
+        const items = portfolioData[activePortfolioTab] || [];
+
+        track.innerHTML = items
+          .map((item, idx) => {
+            const isProject = activePortfolioTab === "projects";
+            const isCertificate = activePortfolioTab === "certificates";
+            const imageFit = isCertificate ? "object-contain" : "object-cover";
+            const imageFrame = isProject ? "h-48" : "h-56";
+            const frameClass = isProject
+              ? `bg-gradient-to-br ${item.accent}`
+              : isCertificate
+                ? `border-2 ${item.issuerColor}`
+                : "bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 border-2 border-amber-400/60";
+
+            return `
+          <article class="shrink-0 ${isProject ? "w-[300px] sm:w-[330px]" : "w-[320px] sm:w-[350px]"} bg-white rounded-3xl ${isProject ? "p-4" : "p-3.5"} shadow-[0_12px_35px_rgba(15,23,42,0.08)] border border-slate-200/90 flex flex-col justify-between transition hover:-translate-y-1">
+            <div>
+              <button type="button" onclick="openDetailModal('${activePortfolioTab}', ${idx})" class="relative ${imageFrame} w-full rounded-2xl overflow-hidden ${frameClass} p-4 flex flex-col justify-between text-left group">
+                ${
+                  item.image
+                    ? `
+                  <img src="${item.image}" alt="${item.title}" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')" class="absolute inset-0 w-full h-full ${imageFit} bg-white" />
+                  <div class="hidden relative z-10 my-auto text-center text-white">
+                    <div class="font-bold text-sm">${item.title}</div>
+                    <div class="text-[11px] mt-1">Image file not found</div>
+                  </div>
+                `
+                    : `
+                  <div class="relative z-10 my-auto text-center ${isCertificate ? "text-slate-900" : "text-white"}">
+                    <div class="font-bold text-sm">${item.title}</div>
+                    <div class="text-[11px] mt-1">${item.sub}</div>
+                  </div>
+                `
+                }
+                ${!isCertificate ? `<span class="relative z-10 self-start px-2 py-1 rounded-lg bg-black/35 text-[9px] font-mono text-white">${isProject ? "PROJECT" : "ACHIEVEMENT"}</span>` : ""}
+              </button>
+
+              <div class="pt-4 px-1 space-y-2">
+                <h3 class="font-display text-lg font-extrabold text-slate-900">${item.title}</h3>
+                <p class="text-xs text-slate-500">${item.sub}</p>
+                <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">${item.desc}</p>
+              </div>
+            </div>
+
+            <div class="pt-4 px-1 mt-2 flex items-center justify-between gap-2">
+              <div class="flex flex-wrap gap-1">
+                ${(item.tags || [])
+                  .slice(0, 3)
+                  .map(
+                    (tag) =>
+                      `<span class="px-2 py-1 rounded-lg bg-slate-100 text-[9px] font-mono text-slate-600">${tag}</span>`,
+                  )
+                  .join("")}
+              </div>
+              <button onclick="openDetailModal('${activePortfolioTab}', ${idx})" class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-royalBlue hover:bg-royalBlueHover text-white text-xs font-semibold transition">
+                Details <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+
+        lucide.createIcons();
+      }
+
+      function switchPortfolioCategory(category) {
+        activePortfolioTab = category;
+        ["projects", "certificates", "awards"].forEach((cat) => {
+          const btn = document.getElementById(`p-tab-${cat}`);
+          if (cat === category) {
+            btn.className =
+              "px-8 sm:px-11 py-3 rounded-xl flex flex-col items-center gap-1 text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-royalBlue text-white shadow-md shadow-blue-600/25";
+          } else {
+            btn.className =
+              "px-8 sm:px-11 py-3 rounded-xl flex flex-col items-center gap-1 text-xs sm:text-sm font-semibold transition-all cursor-pointer text-slate-700 hover:bg-slate-100";
+          }
+        });
+        renderCarousel();
+      }
+
+      function jumpToPortfolioTab(category) {
+        switchPortfolioCategory(category);
+        document
+          .getElementById("portfolio")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      function scrollCarousel(direction) {
+        const track = document.getElementById("portfolio-carousel");
+        track.scrollBy({ left: direction * 350, behavior: "smooth" });
+      }
+
+      /* -------------------------------------------------------------------------
+       6. MODALS (DETAIL, ADD ITEM, CV, GUIDE)
+    ------------------------------------------------------------------------- */
+      function openDetailModal(category, index) {
+        const item = portfolioData[category][index];
+        if (!item) return;
+
+        document.getElementById("modal-badge").textContent = item.sub;
+        document.getElementById("modal-title").textContent = item.title;
+        document.getElementById("modal-desc").textContent = item.desc;
+        document.getElementById("modal-tags").innerHTML = (item.tags || [])
+          .map(
+            (tag) =>
+              `<span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-mono text-xs">${tag}</span>`,
+          )
+          .join("");
+
+        const previewBox = document.getElementById("modal-preview-box");
+        previewBox.innerHTML = item.image
+          ? `<img src="${item.image}" alt="${item.title}" onerror="this.outerHTML='<div class=\\'p-8 text-center text-sm text-slate-500\\'>Image file not found. Check the image path in portfolioData.</div>'" class="w-full max-h-72 object-contain" />`
+          : `<div class="p-8 text-center text-sm text-slate-500">No preview image has been configured for this item.</div>`;
+
+        const modal = document.getElementById("detail-modal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeDetailModal() {
+        const modal = document.getElementById("detail-modal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+
+      /* -------------------------------------------------------------------------
+       8. TOAST HELPER & INITIALIZATION
+    ------------------------------------------------------------------------- */
+      let toastTimer = null;
+      function showToast(msg) {
+        const t = document.getElementById("toast");
+        document.getElementById("toast-msg").textContent = msg;
+        t.classList.remove("hidden");
+        t.classList.add("flex");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          t.classList.add("hidden");
+          t.classList.remove("flex");
+        }, 3200);
+      }
+
+      window.onload = function () {
+        applyLocalAssets();
+        renderCarousel();
+        runTypewriter();
+        initDataCardTilt();
+        initSpidermanStage();
+        initPhysicsLanyard();
+        setActiveNav("home");
+      };
+    </script>
+  </body>
+</html>
